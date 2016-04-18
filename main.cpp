@@ -2,8 +2,9 @@
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
 #include "GameObjects/Board.h"
+#include "GameObjects/Snake.h"
 
-const int screenResHeight = 736;
+const int screenResHeight = 768;
 const int screenResWidth = 1280;
 const int borderLeft = 32;
 const int borderRight = screenResWidth - 32;
@@ -13,10 +14,9 @@ const int borderBottom = screenResHeight - 32;
 int main() {
     // create the window
     sf::RenderWindow window(sf::VideoMode(screenResWidth, screenResHeight), "Tilemap");
-    sf::RectangleShape square(sf::Vector2f(100,100));
-    square.setRotation(45);
-    square.setPosition(500,500);
-    square.setFillColor(sf::Color::Blue);
+    sf::RectangleShape square(sf::Vector2f(32,32));
+    square.setPosition(borderLeft, borderTop);
+    square.setFillColor(sf::Color::Green);
 
     // define the level with an array of tile indices
     const int level[] =
@@ -44,12 +44,12 @@ int main() {
                     1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
                     1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
                     1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
-                    1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+                    1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
             };
 
     // create the tilemap from the level definition
     TileMap map;
-    if (!map.load("res\\tileset2.png", sf::Vector2u(32, 32), level, 40, 23))
+    if (!map.load("res\\tileset2.png", sf::Vector2u(32, 32), level, 40, 24))
         return -1;
 
     // run the main loop

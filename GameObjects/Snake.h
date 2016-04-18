@@ -7,17 +7,6 @@
 
 #include <SFML/Graphics.hpp>
 
-struct SnakeHead {
-public:
-    //shape of the head
-    SnakeBody* next;
-
-    SnakeHead() {
-        //shape of head;
-        next = 0;
-    }
-};
-
 struct SnakeBody {
 public:
     sf::RectangleShape shape;
@@ -29,12 +18,26 @@ public:
     }
 };
 
+struct SnakeHead {
+public:
+    //shape of the head, i'm deciding on this later.
+    SnakeBody* next;
+
+    SnakeHead() {
+        //shape of head;
+        next = 0;
+    }
+};
+
 class Snake {
 private:
     unsigned size;
     SnakeHead* head;
 public:
+    // creates a snake head with body of size x.
     Snake();
+    ~Snake();
+
 };
 
 #endif //SNAKE_SNAKE_H
