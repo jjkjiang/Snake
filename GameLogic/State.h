@@ -1,8 +1,11 @@
-#include "State.h"
+#ifndef stateH
+#define  stateH
 
-class MenuState : public State
+class State
 {
 public:
   virtual void update();
   virtual void draw();
 };
+
+#endif
