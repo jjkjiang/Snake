@@ -2,8 +2,8 @@
 // Created by jerry on 2016/04/18.
 //
 
-#ifndef SNAKE_BOARD_H
-#define SNAKE_BOARD_H
+#ifndef SNAKE_TILEMAP_H
+#define SNAKE_TILEMAP_H
 
 #include <SFML/Graphics.hpp>
 
@@ -65,4 +65,4 @@ private:
     sf::Texture m_tileset;
 };
 
-#endif //SNAKE_BOARD_H
+#endif

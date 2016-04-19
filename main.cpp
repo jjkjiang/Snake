@@ -1,7 +1,6 @@
 #include <iostream>
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
-#include "GameObjects/TileMap.h"
 #include "GameObjects/Snake.h"
 #include "GameLogic/GameState.h"
 #include "Definitions/Logic.h"
@@ -25,8 +24,8 @@ int main() {
             if(event.type == sf::Event::Closed)
                 window.close();
         }
-        GameState* gamestate = new GameState;
-        gamestate->draw();
+        GameState* gameState = new GameState;
+        gameState->draw();
         // draw the map
     }
 

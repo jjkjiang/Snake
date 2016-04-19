@@ -1,3 +1,6 @@
+#ifndef __RESOLUTIONVARIABLES_H__
+#define __RESOLUTIONVARIABLES_H__
+
 const int screenResHeight = 768;
 const int screenResWidth = 1280;
 const int pixelSizeX = 32;
@@ -8,5 +11,7 @@ const int borderTop = pixelSizeY;
 const int borderBottom = screenResHeight - pixelSizeY;
 const unsigned xPixels = screenResWidth / pixelSizeX;
 const unsigned yPixels = screenResHeight / pixelSizeY;
-const string gameResPath = "res\\tileset2.png";
-const string menuResPath; // decide later
+const std::string gameResPath = "res\\tileset2.png";
+const std::string menuResPath; // decide later
+
+#endif

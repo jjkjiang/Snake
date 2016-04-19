@@ -1,5 +1,5 @@
 #ifndef gameStateH
-#define  gameStateH
+#define gameStateH
 
 #include "State.h"
 #include "../GameObjects/Snake.h"
@@ -9,7 +9,7 @@
 class GameState : public State
 {
 private:
-    Tilemap gameMap;
+    TileMap gameMap;
     Snake player1;
 public:
     GameState();
