@@ -3,7 +3,7 @@
 GameState::GameState() {
     if (!gameMap.load(gameResPath, sf::Vector2u(pixelSizeX, pixelSizeY), level, xPixels, yPixels))
         throw runtime_error("Failed to load the tilemap probably because file was not found.");
-    snake = Snake();
+    //snake = Snake();
 }
 
 void GameState::update() {
