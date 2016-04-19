@@ -1,0 +1,1 @@
+/usr/bin/c++    -std=c++11   CMakeFiles/snake.dir/main.cpp.o  -o snake /usr/lib64/libsfml-system.so /usr/lib64/libsfml-window.so /usr/lib64/libsfml-graphics.so /usr/lib64/libsfml-network.so /usr/lib64/libsfml-audio.so 
