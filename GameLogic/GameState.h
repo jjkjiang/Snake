@@ -9,7 +9,7 @@
 class GameState : public State
 {
 private:
-    Tilemap gameMap;
+    TileMap gameMap;
     Snake player1;
 public:
     GameState();
