@@ -7,6 +7,11 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 file(GLOB snake_SRC
     "*.h"
     "*.cpp"
+    "GameLogic/*.cpp"
+    "GameLogic/*.h"
+    "GameObjects/*.cpp"
+    "GameObjects/*.h"
+    "Definitions/*.h"
 )
 
 add_executable(snake ${snake_SRC})
