@@ -123,6 +123,141 @@ snake/fast:
 	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/build
 .PHONY : snake/fast
 
+GameLogic/GameState.o: GameLogic/GameState.cpp.o
+
+.PHONY : GameLogic/GameState.o
+
+# target to build an object file
+GameLogic/GameState.cpp.o:
+	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/GameLogic/GameState.cpp.o
+.PHONY : GameLogic/GameState.cpp.o
+
+GameLogic/GameState.i: GameLogic/GameState.cpp.i
+
+.PHONY : GameLogic/GameState.i
+
+# target to preprocess a source file
+GameLogic/GameState.cpp.i:
+	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/GameLogic/GameState.cpp.i
+.PHONY : GameLogic/GameState.cpp.i
+
+GameLogic/GameState.s: GameLogic/GameState.cpp.s
+
+.PHONY : GameLogic/GameState.s
+
+# target to generate assembly for a file
+GameLogic/GameState.cpp.s:
+	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/GameLogic/GameState.cpp.s
+.PHONY : GameLogic/GameState.cpp.s
+
+GameLogic/MenuState.o: GameLogic/MenuState.cpp.o
+
+.PHONY : GameLogic/MenuState.o
+
+# target to build an object file
+GameLogic/MenuState.cpp.o:
+	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/GameLogic/MenuState.cpp.o
+.PHONY : GameLogic/MenuState.cpp.o
+
+GameLogic/MenuState.i: GameLogic/MenuState.cpp.i
+
+.PHONY : GameLogic/MenuState.i
+
+# target to preprocess a source file
+GameLogic/MenuState.cpp.i:
+	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/GameLogic/MenuState.cpp.i
+.PHONY : GameLogic/MenuState.cpp.i
+
+GameLogic/MenuState.s: GameLogic/MenuState.cpp.s
+
+.PHONY : GameLogic/MenuState.s
+
+# target to generate assembly for a file
+GameLogic/MenuState.cpp.s:
+	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/GameLogic/MenuState.cpp.s
+.PHONY : GameLogic/MenuState.cpp.s
+
+GameLogic/PlayerMove.o: GameLogic/PlayerMove.cpp.o
+
+.PHONY : GameLogic/PlayerMove.o
+
+# target to build an object file
+GameLogic/PlayerMove.cpp.o:
+	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/GameLogic/PlayerMove.cpp.o
+.PHONY : GameLogic/PlayerMove.cpp.o
+
+GameLogic/PlayerMove.i: GameLogic/PlayerMove.cpp.i
+
+.PHONY : GameLogic/PlayerMove.i
+
+# target to preprocess a source file
+GameLogic/PlayerMove.cpp.i:
+	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/GameLogic/PlayerMove.cpp.i
+.PHONY : GameLogic/PlayerMove.cpp.i
+
+GameLogic/PlayerMove.s: GameLogic/PlayerMove.cpp.s
+
+.PHONY : GameLogic/PlayerMove.s
+
+# target to generate assembly for a file
+GameLogic/PlayerMove.cpp.s:
+	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/GameLogic/PlayerMove.cpp.s
+.PHONY : GameLogic/PlayerMove.cpp.s
+
+GameLogic/StateManager.o: GameLogic/StateManager.cpp.o
+
+.PHONY : GameLogic/StateManager.o
+
+# target to build an object file
+GameLogic/StateManager.cpp.o:
+	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/GameLogic/StateManager.cpp.o
+.PHONY : GameLogic/StateManager.cpp.o
+
+GameLogic/StateManager.i: GameLogic/StateManager.cpp.i
+
+.PHONY : GameLogic/StateManager.i
+
+# target to preprocess a source file
+GameLogic/StateManager.cpp.i:
+	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/GameLogic/StateManager.cpp.i
+.PHONY : GameLogic/StateManager.cpp.i
+
+GameLogic/StateManager.s: GameLogic/StateManager.cpp.s
+
+.PHONY : GameLogic/StateManager.s
+
+# target to generate assembly for a file
+GameLogic/StateManager.cpp.s:
+	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/GameLogic/StateManager.cpp.s
+.PHONY : GameLogic/StateManager.cpp.s
+
+GameObjects/Snake.o: GameObjects/Snake.cpp.o
+
+.PHONY : GameObjects/Snake.o
+
+# target to build an object file
+GameObjects/Snake.cpp.o:
+	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/GameObjects/Snake.cpp.o
+.PHONY : GameObjects/Snake.cpp.o
+
+GameObjects/Snake.i: GameObjects/Snake.cpp.i
+
+.PHONY : GameObjects/Snake.i
+
+# target to preprocess a source file
+GameObjects/Snake.cpp.i:
+	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/GameObjects/Snake.cpp.i
+.PHONY : GameObjects/Snake.cpp.i
+
+GameObjects/Snake.s: GameObjects/Snake.cpp.s
+
+.PHONY : GameObjects/Snake.s
+
+# target to generate assembly for a file
+GameObjects/Snake.cpp.s:
+	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/GameObjects/Snake.cpp.s
+.PHONY : GameObjects/Snake.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -159,6 +294,21 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... snake"
+	@echo "... GameLogic/GameState.o"
+	@echo "... GameLogic/GameState.i"
+	@echo "... GameLogic/GameState.s"
+	@echo "... GameLogic/MenuState.o"
+	@echo "... GameLogic/MenuState.i"
+	@echo "... GameLogic/MenuState.s"
+	@echo "... GameLogic/PlayerMove.o"
+	@echo "... GameLogic/PlayerMove.i"
+	@echo "... GameLogic/PlayerMove.s"
+	@echo "... GameLogic/StateManager.o"
+	@echo "... GameLogic/StateManager.i"
+	@echo "... GameLogic/StateManager.s"
+	@echo "... GameObjects/Snake.o"
+	@echo "... GameObjects/Snake.i"
+	@echo "... GameObjects/Snake.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

@@ -81,14 +81,144 @@ CMakeFiles/snake.dir/main.cpp.o.provides: CMakeFiles/snake.dir/main.cpp.o.requir
 CMakeFiles/snake.dir/main.cpp.o.provides.build: CMakeFiles/snake.dir/main.cpp.o
 
 
+CMakeFiles/snake.dir/GameLogic/PlayerMove.cpp.o: CMakeFiles/snake.dir/flags.make
+CMakeFiles/snake.dir/GameLogic/PlayerMove.cpp.o: GameLogic/PlayerMove.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cta/Documents/Projects/SnakePong/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/snake.dir/GameLogic/PlayerMove.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/snake.dir/GameLogic/PlayerMove.cpp.o -c /home/cta/Documents/Projects/SnakePong/GameLogic/PlayerMove.cpp
+
+CMakeFiles/snake.dir/GameLogic/PlayerMove.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/snake.dir/GameLogic/PlayerMove.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cta/Documents/Projects/SnakePong/GameLogic/PlayerMove.cpp > CMakeFiles/snake.dir/GameLogic/PlayerMove.cpp.i
+
+CMakeFiles/snake.dir/GameLogic/PlayerMove.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/snake.dir/GameLogic/PlayerMove.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cta/Documents/Projects/SnakePong/GameLogic/PlayerMove.cpp -o CMakeFiles/snake.dir/GameLogic/PlayerMove.cpp.s
+
+CMakeFiles/snake.dir/GameLogic/PlayerMove.cpp.o.requires:
+
+.PHONY : CMakeFiles/snake.dir/GameLogic/PlayerMove.cpp.o.requires
+
+CMakeFiles/snake.dir/GameLogic/PlayerMove.cpp.o.provides: CMakeFiles/snake.dir/GameLogic/PlayerMove.cpp.o.requires
+	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/GameLogic/PlayerMove.cpp.o.provides.build
+.PHONY : CMakeFiles/snake.dir/GameLogic/PlayerMove.cpp.o.provides
+
+CMakeFiles/snake.dir/GameLogic/PlayerMove.cpp.o.provides.build: CMakeFiles/snake.dir/GameLogic/PlayerMove.cpp.o
+
+
+CMakeFiles/snake.dir/GameLogic/GameState.cpp.o: CMakeFiles/snake.dir/flags.make
+CMakeFiles/snake.dir/GameLogic/GameState.cpp.o: GameLogic/GameState.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cta/Documents/Projects/SnakePong/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/snake.dir/GameLogic/GameState.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/snake.dir/GameLogic/GameState.cpp.o -c /home/cta/Documents/Projects/SnakePong/GameLogic/GameState.cpp
+
+CMakeFiles/snake.dir/GameLogic/GameState.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/snake.dir/GameLogic/GameState.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cta/Documents/Projects/SnakePong/GameLogic/GameState.cpp > CMakeFiles/snake.dir/GameLogic/GameState.cpp.i
+
+CMakeFiles/snake.dir/GameLogic/GameState.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/snake.dir/GameLogic/GameState.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cta/Documents/Projects/SnakePong/GameLogic/GameState.cpp -o CMakeFiles/snake.dir/GameLogic/GameState.cpp.s
+
+CMakeFiles/snake.dir/GameLogic/GameState.cpp.o.requires:
+
+.PHONY : CMakeFiles/snake.dir/GameLogic/GameState.cpp.o.requires
+
+CMakeFiles/snake.dir/GameLogic/GameState.cpp.o.provides: CMakeFiles/snake.dir/GameLogic/GameState.cpp.o.requires
+	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/GameLogic/GameState.cpp.o.provides.build
+.PHONY : CMakeFiles/snake.dir/GameLogic/GameState.cpp.o.provides
+
+CMakeFiles/snake.dir/GameLogic/GameState.cpp.o.provides.build: CMakeFiles/snake.dir/GameLogic/GameState.cpp.o
+
+
+CMakeFiles/snake.dir/GameLogic/MenuState.cpp.o: CMakeFiles/snake.dir/flags.make
+CMakeFiles/snake.dir/GameLogic/MenuState.cpp.o: GameLogic/MenuState.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cta/Documents/Projects/SnakePong/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/snake.dir/GameLogic/MenuState.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/snake.dir/GameLogic/MenuState.cpp.o -c /home/cta/Documents/Projects/SnakePong/GameLogic/MenuState.cpp
+
+CMakeFiles/snake.dir/GameLogic/MenuState.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/snake.dir/GameLogic/MenuState.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cta/Documents/Projects/SnakePong/GameLogic/MenuState.cpp > CMakeFiles/snake.dir/GameLogic/MenuState.cpp.i
+
+CMakeFiles/snake.dir/GameLogic/MenuState.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/snake.dir/GameLogic/MenuState.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cta/Documents/Projects/SnakePong/GameLogic/MenuState.cpp -o CMakeFiles/snake.dir/GameLogic/MenuState.cpp.s
+
+CMakeFiles/snake.dir/GameLogic/MenuState.cpp.o.requires:
+
+.PHONY : CMakeFiles/snake.dir/GameLogic/MenuState.cpp.o.requires
+
+CMakeFiles/snake.dir/GameLogic/MenuState.cpp.o.provides: CMakeFiles/snake.dir/GameLogic/MenuState.cpp.o.requires
+	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/GameLogic/MenuState.cpp.o.provides.build
+.PHONY : CMakeFiles/snake.dir/GameLogic/MenuState.cpp.o.provides
+
+CMakeFiles/snake.dir/GameLogic/MenuState.cpp.o.provides.build: CMakeFiles/snake.dir/GameLogic/MenuState.cpp.o
+
+
+CMakeFiles/snake.dir/GameLogic/StateManager.cpp.o: CMakeFiles/snake.dir/flags.make
+CMakeFiles/snake.dir/GameLogic/StateManager.cpp.o: GameLogic/StateManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cta/Documents/Projects/SnakePong/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/snake.dir/GameLogic/StateManager.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/snake.dir/GameLogic/StateManager.cpp.o -c /home/cta/Documents/Projects/SnakePong/GameLogic/StateManager.cpp
+
+CMakeFiles/snake.dir/GameLogic/StateManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/snake.dir/GameLogic/StateManager.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cta/Documents/Projects/SnakePong/GameLogic/StateManager.cpp > CMakeFiles/snake.dir/GameLogic/StateManager.cpp.i
+
+CMakeFiles/snake.dir/GameLogic/StateManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/snake.dir/GameLogic/StateManager.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cta/Documents/Projects/SnakePong/GameLogic/StateManager.cpp -o CMakeFiles/snake.dir/GameLogic/StateManager.cpp.s
+
+CMakeFiles/snake.dir/GameLogic/StateManager.cpp.o.requires:
+
+.PHONY : CMakeFiles/snake.dir/GameLogic/StateManager.cpp.o.requires
+
+CMakeFiles/snake.dir/GameLogic/StateManager.cpp.o.provides: CMakeFiles/snake.dir/GameLogic/StateManager.cpp.o.requires
+	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/GameLogic/StateManager.cpp.o.provides.build
+.PHONY : CMakeFiles/snake.dir/GameLogic/StateManager.cpp.o.provides
+
+CMakeFiles/snake.dir/GameLogic/StateManager.cpp.o.provides.build: CMakeFiles/snake.dir/GameLogic/StateManager.cpp.o
+
+
+CMakeFiles/snake.dir/GameObjects/Snake.cpp.o: CMakeFiles/snake.dir/flags.make
+CMakeFiles/snake.dir/GameObjects/Snake.cpp.o: GameObjects/Snake.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cta/Documents/Projects/SnakePong/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/snake.dir/GameObjects/Snake.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/snake.dir/GameObjects/Snake.cpp.o -c /home/cta/Documents/Projects/SnakePong/GameObjects/Snake.cpp
+
+CMakeFiles/snake.dir/GameObjects/Snake.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/snake.dir/GameObjects/Snake.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cta/Documents/Projects/SnakePong/GameObjects/Snake.cpp > CMakeFiles/snake.dir/GameObjects/Snake.cpp.i
+
+CMakeFiles/snake.dir/GameObjects/Snake.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/snake.dir/GameObjects/Snake.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cta/Documents/Projects/SnakePong/GameObjects/Snake.cpp -o CMakeFiles/snake.dir/GameObjects/Snake.cpp.s
+
+CMakeFiles/snake.dir/GameObjects/Snake.cpp.o.requires:
+
+.PHONY : CMakeFiles/snake.dir/GameObjects/Snake.cpp.o.requires
+
+CMakeFiles/snake.dir/GameObjects/Snake.cpp.o.provides: CMakeFiles/snake.dir/GameObjects/Snake.cpp.o.requires
+	$(MAKE) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/GameObjects/Snake.cpp.o.provides.build
+.PHONY : CMakeFiles/snake.dir/GameObjects/Snake.cpp.o.provides
+
+CMakeFiles/snake.dir/GameObjects/Snake.cpp.o.provides.build: CMakeFiles/snake.dir/GameObjects/Snake.cpp.o
+
+
 # Object files for target snake
 snake_OBJECTS = \
-"CMakeFiles/snake.dir/main.cpp.o"
+"CMakeFiles/snake.dir/main.cpp.o" \
+"CMakeFiles/snake.dir/GameLogic/PlayerMove.cpp.o" \
+"CMakeFiles/snake.dir/GameLogic/GameState.cpp.o" \
+"CMakeFiles/snake.dir/GameLogic/MenuState.cpp.o" \
+"CMakeFiles/snake.dir/GameLogic/StateManager.cpp.o" \
+"CMakeFiles/snake.dir/GameObjects/Snake.cpp.o"
 
 # External object files for target snake
 snake_EXTERNAL_OBJECTS =
 
 snake: CMakeFiles/snake.dir/main.cpp.o
+snake: CMakeFiles/snake.dir/GameLogic/PlayerMove.cpp.o
+snake: CMakeFiles/snake.dir/GameLogic/GameState.cpp.o
+snake: CMakeFiles/snake.dir/GameLogic/MenuState.cpp.o
+snake: CMakeFiles/snake.dir/GameLogic/StateManager.cpp.o
+snake: CMakeFiles/snake.dir/GameObjects/Snake.cpp.o
 snake: CMakeFiles/snake.dir/build.make
 snake: /usr/lib64/libsfml-system.so
 snake: /usr/lib64/libsfml-window.so
@@ -96,7 +226,7 @@ snake: /usr/lib64/libsfml-graphics.so
 snake: /usr/lib64/libsfml-network.so
 snake: /usr/lib64/libsfml-audio.so
 snake: CMakeFiles/snake.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/cta/Documents/Projects/SnakePong/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable snake"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/cta/Documents/Projects/SnakePong/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable snake"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/snake.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -105,6 +235,11 @@ CMakeFiles/snake.dir/build: snake
 .PHONY : CMakeFiles/snake.dir/build
 
 CMakeFiles/snake.dir/requires: CMakeFiles/snake.dir/main.cpp.o.requires
+CMakeFiles/snake.dir/requires: CMakeFiles/snake.dir/GameLogic/PlayerMove.cpp.o.requires
+CMakeFiles/snake.dir/requires: CMakeFiles/snake.dir/GameLogic/GameState.cpp.o.requires
+CMakeFiles/snake.dir/requires: CMakeFiles/snake.dir/GameLogic/MenuState.cpp.o.requires
+CMakeFiles/snake.dir/requires: CMakeFiles/snake.dir/GameLogic/StateManager.cpp.o.requires
+CMakeFiles/snake.dir/requires: CMakeFiles/snake.dir/GameObjects/Snake.cpp.o.requires
 
 .PHONY : CMakeFiles/snake.dir/requires
 

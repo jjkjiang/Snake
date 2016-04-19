@@ -1,8 +1,10 @@
 #include "GameState.h"
+#include "../Definitions/Logic.h"
+#include "../Definitions/ResolutionVariables.h"
 
 GameState::GameState() {
     if (!gameMap.load(gameResPath, sf::Vector2u(pixelSizeX, pixelSizeY), level, xPixels, yPixels))
-        throw runtime_error("Failed to load the tilemap probably because file was not found.");
+        throw std::runtime_error("Failed to load the tilemap probably because file was not found.");
     //snake = Snake();
 }
 

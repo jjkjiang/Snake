@@ -1,5 +1,10 @@
 file(REMOVE_RECURSE
   "CMakeFiles/snake.dir/main.cpp.o"
+  "CMakeFiles/snake.dir/GameLogic/PlayerMove.cpp.o"
+  "CMakeFiles/snake.dir/GameLogic/GameState.cpp.o"
+  "CMakeFiles/snake.dir/GameLogic/MenuState.cpp.o"
+  "CMakeFiles/snake.dir/GameLogic/StateManager.cpp.o"
+  "CMakeFiles/snake.dir/GameObjects/Snake.cpp.o"
   "snake.pdb"
   "snake"
 )

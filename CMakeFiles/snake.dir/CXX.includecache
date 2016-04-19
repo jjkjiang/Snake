@@ -9,8 +9,10 @@
 /home/cta/Documents/Projects/SnakePong/Definitions/Logic.h
 
 /home/cta/Documents/Projects/SnakePong/Definitions/ResolutionVariables.h
-string
--
+
+/home/cta/Documents/Projects/SnakePong/GameLogic/GameState.cpp
+GameState.h
+/home/cta/Documents/Projects/SnakePong/GameLogic/GameState.h
 
 /home/cta/Documents/Projects/SnakePong/GameLogic/GameState.h
 State.h
@@ -22,6 +24,8 @@ State.h
 stdexcept
 -
 
+/home/cta/Documents/Projects/SnakePong/GameLogic/MenuState.cpp
+
 /home/cta/Documents/Projects/SnakePong/GameLogic/PlayerMove.cpp
 PlayerMove.h
 /home/cta/Documents/Projects/SnakePong/GameLogic/PlayerMove.h
@@ -31,6 +35,8 @@ SFML/Window.hpp
 -
 
 /home/cta/Documents/Projects/SnakePong/GameLogic/State.h
+
+/home/cta/Documents/Projects/SnakePong/GameLogic/StateManager.cpp
 
 /home/cta/Documents/Projects/SnakePong/GameObjects/Snake.cpp
 Snake.h
@@ -55,8 +61,6 @@ SFML/Window.hpp
 -
 SFML/Graphics.hpp
 -
-GameObjects/TileMap.h
-/home/cta/Documents/Projects/SnakePong/GameObjects/TileMap.h
 GameObjects/Snake.h
 /home/cta/Documents/Projects/SnakePong/GameObjects/Snake.h
 GameLogic/GameState.h
