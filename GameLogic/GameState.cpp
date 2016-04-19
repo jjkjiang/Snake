@@ -12,13 +12,13 @@ void GameState::update() {
 
 }
 
-void GameState::draw(sf::RenderWindow window) {
+void GameState::drawState(sf::RenderWindow& window) {
     sf::RectangleShape square(sf::Vector2f(pixelSizeX,pixelSizeY));
     square.setPosition(borderLeft, borderTop);
     square.setFillColor(sf::Color::Green);
 
     window.clear();
-    window.draw(map);
+    window.draw(gameMap);
     window.draw(square);
     window.display();
 }
