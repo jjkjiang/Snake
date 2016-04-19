@@ -38,7 +38,7 @@ class Snake {
 private:
     unsigned size;
     SnakeHead* head;
-    // use playermove class to get the direction for updates
+    // use playermove class to get the direction for snake movement updates
     PlayerMove playerMove;
 
 public:

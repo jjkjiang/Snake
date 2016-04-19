@@ -12,6 +12,7 @@ int main() {
 
     // define the level with an array of tile indices
 
+
     // create the tilemap from the level definition
 
     // run the main loop
@@ -24,8 +25,9 @@ int main() {
             if(event.type == sf::Event::Closed)
                 window.close();
         }
-        GameState* gameState = new GameState;
-        gameState->draw();
+        window.display();
+        GameState gameState;
+        gameState.drawState(window);
         // draw the map
     }
 
