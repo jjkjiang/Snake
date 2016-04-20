@@ -8,8 +8,8 @@ GameState::GameState() {
     //snake = Snake();
 }
 
-void GameState::update() {
-    player1.updateSnake();
+void GameState::update(const sf::Keyboard::Key& press) {
+    player1.updateSnake(press);
 }
 
 void GameState::drawState(sf::RenderWindow& window) {

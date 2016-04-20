@@ -13,7 +13,7 @@ private:
     Snake player1;
 public:
     GameState();
-    virtual void update();
+    virtual void update(const sf::Keyboard::Key&);
     virtual void drawState(sf::RenderWindow& window);
 };
 

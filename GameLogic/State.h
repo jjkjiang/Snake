@@ -2,11 +2,12 @@
 #define __STATE_H__
 
 #include <SFML/Graphics/RenderWindow.hpp>
+#include <SFML/Window/Keyboard.hpp>
 
 class State
 {
 public:
-  virtual void update() = 0;
+  virtual void update(const sf::Keyboard::Key&) = 0;
   virtual void drawState(sf::RenderWindow&) = 0;
 };
 
