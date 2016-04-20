@@ -32,16 +32,14 @@ private:
     SnakeBody* tail;
     // use playermove class to get the direction for snake movement updates
     PlayerMove playerMove;
+    sf::CircleShape headShape;
 
 public:
     // creates a snake head with body of default size x.
     Snake();
     ~Snake();
     // will likely contain a case for
-    void moveRight();
-    void moveLeft();
-    void moveUp();
-    void moveDown();
+    void moveDir(const Vector2f&);
     void updateSnake(const sf::Keyboard::Key&);
     void displaySnake(sf::RenderWindow&);
     // checks for collision with self and borders defined in Definitions/ResolutionVariables.h

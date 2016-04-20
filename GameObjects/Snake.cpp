@@ -5,7 +5,7 @@
 #include "Snake.h"
 
 Snake::Snake() {
-    size = 5;
+    size = 10;
     head = new SnakeBody(sf::Vector2f(20 * pixelSizeX, 12 * pixelSizeY));
     tail = head;
     for (unsigned i = 1; i < size; i++) {
@@ -17,6 +17,9 @@ Snake::Snake() {
         head = nextBody;
     }
 
+    headShape.setRadius((pixelSizeX / 2) - 10);
+    headShape.setFillColor(sf::Color::Black);
+    headShape.setPosition(head->shape.getPosition());
     playerMove = PlayerMove();
 }
 
@@ -24,49 +27,7 @@ Snake::~Snake() {
     delete head;
 }
 
-void Snake::moveRight() {
-    if (collision()) return;
-    Vector2f nextPos = head->shape.getPosition();
-    nextPos.x += pixelSizeX;
-    SnakeBody* nextBody = new SnakeBody(nextPos);
-    head->prev = nextBody;
-    nextBody->next = head;
-    head = nextBody;
-    SnakeBody* temp = tail->prev;
-    delete tail;
-    tail = temp;
-    tail->next = 0;
-}
-void Snake::moveLeft() {
-    if (collision()) return;
-    Vector2f nextPos = head->shape.getPosition();
-    nextPos.x -= pixelSizeX;
-    SnakeBody* nextBody = new SnakeBody(nextPos);
-    head->prev = nextBody;
-    nextBody->next = head;
-    head = nextBody;
-    SnakeBody* temp = tail->prev;
-    delete tail;
-    tail = temp;
-    tail->next = 0;
-}
-void Snake::moveUp() {
-    if (collision()) return;
-    Vector2f nextPos = head->shape.getPosition();
-    nextPos.y -= pixelSizeY;
-    SnakeBody* nextBody = new SnakeBody(nextPos);
-    head->prev = nextBody;
-    nextBody->next = head;
-    head = nextBody;
-    SnakeBody* temp = tail->prev;
-    delete tail;
-    tail = temp;
-    tail->next = 0;
-}
-void Snake::moveDown() {
-    if (collision()) return;
-    Vector2f nextPos = head->shape.getPosition();
-    nextPos.y += pixelSizeY;
+void Snake::moveDir(const Vector2f& nextPos) {
     SnakeBody* nextBody = new SnakeBody(nextPos);
     head->prev = nextBody;
     nextBody->next = head;
@@ -82,24 +43,33 @@ void Snake::updateSnake(const sf::Keyboard::Key& dir) {
     // what's worse, creating a new movementDir everytime or calling getDirection 4x?
     sf::Keyboard::Key movementDir = playerMove.getDirection();
 
+    if (collision()) {
+        //do something idk yet
+        return;
+    }
+    Vector2f nextPos = head->shape.getPosition();
     if (movementDir == sf::Keyboard::Up) {
-        moveUp();
+        nextPos.y -= pixelSizeY;
     }
     if (movementDir == sf::Keyboard::Down) {
-        moveDown();
+        nextPos.y += pixelSizeY;
     }
     if (movementDir == sf::Keyboard::Left) {
-        moveLeft();
+        nextPos.x -= pixelSizeX;
     }
     if (movementDir == sf::Keyboard::Right) {
-        moveRight();
+        nextPos.x += pixelSizeX;
     }
+
+    moveDir(nextPos);
 }
 
 void Snake::displaySnake(sf::RenderWindow& window) {
     for (SnakeBody* i = head; i != 0; i = i->next) {
         window.draw(i->shape);
     }
+    headShape.setPosition(head->shape.getPosition());
+    window.draw(headShape);
 }
 
 bool Snake::collision() {
