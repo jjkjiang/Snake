@@ -10,7 +10,7 @@ class GameState : public State
 {
 private:
     TileMap gameMap;
-    // Snake player1;
+    Snake player1;
 public:
     GameState();
     virtual void update();

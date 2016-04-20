@@ -12,6 +12,7 @@
 struct SnakeBody {
 public:
     sf::RectangleShape shape;
+    sf::Keyboard::Key dir;
     SnakeBody* next;
 
     SnakeBody(const sf::Vector2f& position) {
@@ -24,12 +25,14 @@ public:
 
 struct SnakeHead {
 public:
-    //shape of the head, i'm deciding on this later.
+    sf::RectangleShape shape;
+    sf::Keyboard::Key dir;
     SnakeBody* next;
 
     SnakeHead(const sf::Vector2f& position) {
-        //shape of head;
-        //shape.setPosition(position);
+        shape = sf::RectangleShape(sf::Vector2f(pixelSizeX, pixelSizeY));
+        shape.setFillColor(sf::Color::Green);
+        shape.setPosition(position);
         next = 0;
     }
 };
@@ -47,7 +50,7 @@ public:
     ~Snake();
     // will likely contain a case for
     void updateSnake();
-    void displaySnake();
+    void displaySnake(sf::RenderWindow&);
     // checks for collision with self and borders defined in Definitions/ResolutionVariables.h
     void checkCollision();
 };

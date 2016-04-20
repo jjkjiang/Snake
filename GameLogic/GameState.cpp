@@ -9,7 +9,7 @@ GameState::GameState() {
 }
 
 void GameState::update() {
-
+    player1.updateSnake();
 }
 
 void GameState::drawState(sf::RenderWindow& window) {
@@ -20,5 +20,6 @@ void GameState::drawState(sf::RenderWindow& window) {
     window.clear();
     window.draw(gameMap);
     window.draw(square);
-    window.display();
+    player1.displaySnake(window);
+    //window.display();
 }
