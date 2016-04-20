@@ -17,15 +17,15 @@ int main() {
 
     // create the tilemap from the level definition
 
-    sf::Keyboard::Key press;
-    unsigned iterations = 0;
+    sf::Keyboard::Key press = sf::Keyboard::Up;
     // run the main loop
+    GameState gameState;
     while (window.isOpen())
     {
 
         // handle events
         sf::Event event;
-        PlayerMove player1;
+
         while (window.pollEvent(event))
         {
             if(event.type == sf::Event::Closed)
@@ -34,13 +34,7 @@ int main() {
                 press = event.key.code;
             }
         }
-        if (iterations == 300) {
-            shape.move(32, 32);
-            iterations = 0;
-        }
-        iterations++;
         window.display();
-        GameState gameState;
         gameState.drawState(window);
         window.draw(shape);
         gameState.update(press);
