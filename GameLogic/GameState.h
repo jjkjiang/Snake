@@ -11,6 +11,7 @@ class GameState : public State
 private:
     TileMap gameMap;
     Snake player1;
+    int iterations;
 public:
     GameState();
     virtual void update(const sf::Keyboard::Key&);

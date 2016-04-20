@@ -9,14 +9,14 @@ PlayerMove::PlayerMove() {
     currentDirection = Keyboard::Up;
 }
 
-void PlayerMove::checkChangeDirection() {
-    if (Keyboard::isKeyPressed(Keyboard::Right) && currentDirection != Keyboard::Left)
+void PlayerMove::setDirection(const sf::Keyboard::Key& curr) {
+    if (curr == Keyboard::Right && currentDirection != Keyboard::Left)
         currentDirection = Keyboard::Right;
-    if (Keyboard::isKeyPressed(Keyboard::Left) && currentDirection != Keyboard::Right)
+    if (curr == Keyboard::Left && currentDirection != Keyboard::Right)
         currentDirection = Keyboard::Left;
-    if (Keyboard::isKeyPressed(Keyboard::Up) && currentDirection != Keyboard::Down)
+    if (curr == Keyboard::Up && currentDirection != Keyboard::Down)
         currentDirection = Keyboard::Up;
-    if (Keyboard::isKeyPressed(Keyboard::Down) && currentDirection != Keyboard::Up)
+    if (curr == Keyboard::Down && currentDirection != Keyboard::Up)
         currentDirection = Keyboard::Down;
 }
 
