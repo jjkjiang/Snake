@@ -17,5 +17,9 @@ MenuState::MenuState() {
     //snakeLogo;
 
 }
-void MenuState::update(const sf::Keyboard::Key&);
-void MenuState::drawState(sf::RenderWindow& window);
+void MenuState::update(const sf::Keyboard::Key&) {
+    return;
+}
+void MenuState::drawState(sf::RenderWindow& window) {
+    return;
+}

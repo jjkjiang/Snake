@@ -6,15 +6,13 @@ GameState::GameState() {
     if (!gameMap.load(gameResPath, sf::Vector2u(pixelSizeX, pixelSizeY), level, xPixels, yPixels))
         throw std::runtime_error("Failed to load the tilemap probably because file was not found.");
     //snake = Snake();
-    iterations = 0;
 }
 
 void GameState::update(const sf::Keyboard::Key& press) {
-    if (iterations == 5000) {
+    if (gameClock.getElapsedTime().asSeconds() >= 1) {
         player1.updateSnake(press);
-        iterations = 0;
+        gameClock.restart();
     }
-    iterations++;
 }
 
 void GameState::drawState(sf::RenderWindow& window) {
