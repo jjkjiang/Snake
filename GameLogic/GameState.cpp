@@ -1,6 +1,4 @@
 #include "GameState.h"
-#include "../Definitions/Logic.h"
-#include "../Definitions/ResolutionVariables.h"
 
 GameState::GameState() {
     if (!gameMap.load(gameResPath, sf::Vector2u(pixelSizeX, pixelSizeY), level, xPixels, yPixels))
@@ -10,7 +8,7 @@ GameState::GameState() {
 
 void GameState::update(const sf::Keyboard::Key& press) {
     if (gameClock.getElapsedTime().asSeconds() >= 1) {
-        player1.updateSnake(press);
+        player1.updateSnake(press, player1Fruit.getPos());
         gameClock.restart();
     }
 }
@@ -23,6 +21,7 @@ void GameState::drawState(sf::RenderWindow& window) {
     window.clear();
     window.draw(gameMap);
     window.draw(square);
+    player1Fruit.drawFruit(window);
     player1.displaySnake(window);
-    //window.display();
+    window.display();
 }

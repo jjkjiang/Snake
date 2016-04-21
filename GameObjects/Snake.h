@@ -40,7 +40,8 @@ public:
     ~Snake();
     // will likely contain a case for
     void moveDir(const Vector2f&);
-    void updateSnake(const sf::Keyboard::Key&);
+    void eatFruit(const Vector2f&);
+    void updateSnake(const sf::Keyboard::Key&, sf::Vector2f);
     void displaySnake(sf::RenderWindow&);
     // checks for collision with self and borders defined in Definitions/ResolutionVariables.h
     bool collision();

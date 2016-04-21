@@ -3,7 +3,6 @@ project(snake)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
-
 file(GLOB snake_SRC
     "*.h"
     "*.cpp"
@@ -15,7 +14,6 @@ file(GLOB snake_SRC
 )
 
 add_executable(snake ${snake_SRC})
-
 
 set(CMAKE_PREFIX_PATH PATH "C:\\SFML-2.3.2")
 

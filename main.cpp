@@ -1,7 +1,9 @@
 #include <iostream>
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
+#include <stdexcept>
 #include "GameObjects/Snake.h"
+#include "GameObjects/Fruit.h"
 #include "GameLogic/GameState.h"
 #include "Definitions/Logic.h"
 #include "Definitions/ResolutionVariables.h"
@@ -34,7 +36,7 @@ int main() {
                 press = event.key.code;
             }
         }
-        window.display();
+        //window.display();
         gameState.drawState(window);
         window.draw(shape);
         gameState.update(press);
