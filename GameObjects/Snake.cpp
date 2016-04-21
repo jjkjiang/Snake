@@ -73,5 +73,15 @@ void Snake::displaySnake(sf::RenderWindow& window) {
 }
 
 bool Snake::collision() {
+    sf::Vector2f currPos = head->shape.getPosition();
+    if (currPos.x > borderRight || currPos.x < borderLeft || currPos.y > borderBottom || currPos.y < borderTop) {
+        return true;
+    }
+    for (SnakeBody* i = head->next; i != 0; i = i->next) {
+        if (currPos == i->shape.getPosition()) {
+            return true;
+        }
+    }
+
     return false;
 }

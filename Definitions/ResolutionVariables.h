@@ -12,6 +12,6 @@ const int borderBottom = screenResHeight - pixelSizeY;
 const unsigned xPixels = screenResWidth / pixelSizeX;
 const unsigned yPixels = screenResHeight / pixelSizeY;
 const std::string gameResPath = "res/tileset2.png";
-const std::string menuResPath; // decide later
+const std::string menuResPath = "res/tileset.png"; // decide later
 
 #endif
