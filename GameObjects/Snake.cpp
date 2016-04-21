@@ -24,7 +24,14 @@ Snake::Snake() {
 }
 
 Snake::~Snake() {
-    delete head;
+    SnakeBody* curr = head;
+    while (curr != 0) {
+        SnakeBody* temp = curr;
+        curr = curr->next;
+        delete temp;
+    }
+    head = 0;
+    tail = 0;
 }
 
 void Snake::moveDir(const Vector2f& nextPos) {
