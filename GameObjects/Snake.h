@@ -38,10 +38,10 @@ public:
     // creates a snake head with body of default size x.
     Snake();
     ~Snake();
-    // will likely contain a case for
     void moveDir(const Vector2f&);
     void eatFruit(const Vector2f&);
-    void updateSnake(const sf::Keyboard::Key&, sf::Vector2f);
+    // returns 1 if a fruit was encountered, 2 if you collide, 0 otherwise.
+    int updateSnake(const sf::Keyboard::Key&, sf::Vector2f);
     void displaySnake(sf::RenderWindow&);
     // checks for collision with self and borders defined in Definitions/ResolutionVariables.h
     bool collision();

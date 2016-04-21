@@ -14,8 +14,8 @@ private:
 public:
     // creates a red "fruit" with random position
     Fruit();
-    // changes the current fruit position to a random new position, returns the old location.
-    sf::Vector2f eatFruit();
+    // changes the current fruit position to a random new position.
+    void resetFruit();
     // draws the current fruit on the window
     void drawFruit(sf::RenderWindow&);
     // returns the position of the fruit

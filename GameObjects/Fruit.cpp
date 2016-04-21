@@ -3,11 +3,13 @@
 //
 
 #include "Fruit.h"
+#include "../Definitions/ResolutionVariables.h"
 
 sf::Vector2f Fruit::randomPos() {
-    int posX = rand() % (borderRight - borderLeft) + pixelSizeX;
-    int posY = rand() % (borderBottom - borderTop) + pixelSizeY;
-    return sf::Vector2f(poxX, poxY);
+    srand(time(0));
+    int posX = ((rand() % (xPixels - 2)) + 2) * pixelSizeX;
+    int posY = ((rand() % (yPixels - 2)) + 2) * pixelSizeY;
+    return sf::Vector2f(posX, posY);
 }
 
 Fruit::Fruit() {
@@ -16,13 +18,11 @@ Fruit::Fruit() {
     fruit.setPosition(randomPos());
 }
 
-sf::Vector2f Fruit::eatFruit() {
-    sf::Vector2f currPos = fruit.getPosition();
+void Fruit::resetFruit() {
     fruit.setPosition(randomPos());
-    return currPos;
 }
 
-void Fruit::drawFruit(sf::RenderWindow window) {
+void Fruit::drawFruit(sf::RenderWindow& window) {
     window.draw(fruit);
 }
 

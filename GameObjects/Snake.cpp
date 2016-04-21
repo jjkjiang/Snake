@@ -53,14 +53,14 @@ void Snake::eatFruit(const Vector2f& nextPos) {
     size++;
 }
 
-void Snake::updateSnake(const sf::Keyboard::Key& dir, sf::Vector2f fruitPos) {
+int Snake::updateSnake(const sf::Keyboard::Key& dir, sf::Vector2f fruitPos) {
     playerMove.setDirection(dir);
     // what's worse, creating a new movementDir everytime or calling getDirection 4x?
     sf::Keyboard::Key movementDir = playerMove.getDirection();
 
     if (collision()) {
         //do something idk yet
-        return;
+        return 2;
     }
 
     Vector2f nextPos = head->shape.getPosition();
@@ -76,10 +76,13 @@ void Snake::updateSnake(const sf::Keyboard::Key& dir, sf::Vector2f fruitPos) {
     if (movementDir == sf::Keyboard::Right) {
         nextPos.x += pixelSizeX;
     }
-    if (nextPos == fruitPos)
+    if (nextPos == fruitPos) {
         eatFruit(nextPos);
-     else
+        return 1;
+    } else {
         moveDir(nextPos);
+    }
+    return 0;
 }
 
 void Snake::displaySnake(sf::RenderWindow& window) {

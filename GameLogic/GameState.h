@@ -16,6 +16,7 @@ private:
     TileMap gameMap;
     Snake player1;
     Clock gameClock;
+    float updateTime;
 public:
     GameState();
     virtual void update(const sf::Keyboard::Key&);

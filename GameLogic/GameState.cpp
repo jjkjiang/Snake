@@ -7,8 +7,17 @@ GameState::GameState() {
 }
 
 void GameState::update(const sf::Keyboard::Key& press) {
-    if (gameClock.getElapsedTime().asSeconds() >= 1) {
-        player1.updateSnake(press, player1Fruit.getPos());
+    if (press == sf::Keyboard::LShift) {
+        updateTime = 0.2;
+    } else {
+        updateTime = 1;
+    }
+
+    if (gameClock.getElapsedTime().asSeconds() >= updateTime) {
+        int result = player1.updateSnake(press, player1Fruit.getPos());
+        if (result == 1) {
+            player1Fruit.resetFruit();
+        }
         gameClock.restart();
     }
 }
