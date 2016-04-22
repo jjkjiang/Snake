@@ -8,6 +8,8 @@
 #include <SFML/Window.hpp>
 using namespace sf;
 
+// this class stores a key direction so that the snake can be constantly updated based on the last direction and any
+// inputs, this also limits movement so that the player cannot flip its movement into itself.
 class PlayerMove {
 private:
     Keyboard::Key currentDirection;

@@ -1,6 +1,7 @@
 #ifndef __LOGIC_H__
 #define __LOGIC_H__
 
+// used in the load tilemap command in SFML.
 const int level[] =
         {
                 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,

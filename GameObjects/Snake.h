@@ -9,22 +9,25 @@
 #include "../GameLogic/PlayerMove.h"
 #include "../Definitions/ResolutionVariables.h"
 
+// makes up the body of the snake, dir will be used to calculate the physics of pong balls later on.
 struct SnakeBody {
 public:
     sf::RectangleShape shape;
-    //sf::Keyboard::Key dir;
+    sf::Keyboard::Key dir;
     SnakeBody* next;
     SnakeBody* prev;
 
-    SnakeBody(const sf::Vector2f& position) {
+    SnakeBody(const sf::Vector2f& position, const sf::Keyboard::Key dir) {
         shape = sf::RectangleShape(sf::Vector2f(pixelSizeX, pixelSizeY));
         shape.setFillColor(sf::Color::Green);
         shape.setPosition(position);
         next = 0;
         prev = 0;
+        this->dir = dir;
     }
 };
 
+// snake class that represents the player in snake
 class Snake {
 private:
     unsigned size;

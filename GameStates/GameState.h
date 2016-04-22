@@ -9,6 +9,7 @@
 #include "../Definitions/ResolutionVariables.h"
 #include <stdexcept>
 
+// this state will be primarily for the snake game itself
 class GameState : public State
 {
 private:

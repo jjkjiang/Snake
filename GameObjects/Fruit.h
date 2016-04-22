@@ -8,6 +8,7 @@
 #include <SFML/Graphics.hpp>
 #include <cstdlib>
 
+// fruit class for increasing the size of the player
 class Fruit {
 private:
     sf::RectangleShape fruit;

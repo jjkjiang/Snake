@@ -4,11 +4,12 @@
 
 #include "PlayerMove.h"
 
-
+//
 PlayerMove::PlayerMove() {
     currentDirection = Keyboard::Up;
 }
 
+// updates direction based on what the current press is
 void PlayerMove::setDirection(const sf::Keyboard::Key& curr) {
     if (curr == Keyboard::Right && currentDirection != Keyboard::Left)
         currentDirection = Keyboard::Right;
