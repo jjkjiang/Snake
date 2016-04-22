@@ -1,8 +1,21 @@
-#include "State.h"
+#ifndef __MENUSTATE_H__
+#define __MENUSTATE_H__
 
-class MenuState : public State
-{
+#include "State.h"
+#include "../GameObjects/TileMap.h"
+
+class MenuState : public State {
+private:
+    TileMap menuBg;
+    sf::RectangleShape snakeLogo;
+    sf::RectangleShape startSnakeButton;
+    //sf::RectangleShape startSnakePongButton;
+    //sf::RectangleShape optionsButton;
+    sf::RectangleShape exitButton;
 public:
-  virtual void update();
-  virtual void draw();
+    MenuState();
+    virtual void update(const sf::Keyboard::Key&);
+    virtual void drawState(sf::RenderWindow& window);
 };
+
+#endif

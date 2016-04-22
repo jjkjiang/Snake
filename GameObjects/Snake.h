@@ -6,38 +6,45 @@
 #define SNAKE_SNAKE_H
 
 #include <SFML/Graphics.hpp>
+#include "../GameLogic/PlayerMove.h"
+#include "../Definitions/ResolutionVariables.h"
 
 struct SnakeBody {
 public:
     sf::RectangleShape shape;
+    //sf::Keyboard::Key dir;
     SnakeBody* next;
+    SnakeBody* prev;
 
-    SnakeBody() {
-        shape = sf::RectangleShape(sf::Vector2f(32, 32));
+    SnakeBody(const sf::Vector2f& position) {
+        shape = sf::RectangleShape(sf::Vector2f(pixelSizeX, pixelSizeY));
+        shape.setFillColor(sf::Color::Green);
+        shape.setPosition(position);
         next = 0;
-    }
-};
-
-struct SnakeHead {
-public:
-    //shape of the head, i'm deciding on this later.
-    SnakeBody* next;
-
-    SnakeHead() {
-        //shape of head;
-        next = 0;
+        prev = 0;
     }
 };
 
 class Snake {
 private:
     unsigned size;
-    SnakeHead* head;
+    SnakeBody* head;
+    SnakeBody* tail;
+    // use playermove class to get the direction for snake movement updates
+    PlayerMove playerMove;
+    sf::CircleShape headShape;
+
 public:
-    // creates a snake head with body of size x.
+    // creates a snake head with body of default size x.
     Snake();
     ~Snake();
-
+    void moveDir(const Vector2f&);
+    void eatFruit(const Vector2f&);
+    // returns 1 if a fruit was encountered, 2 if you collide, 0 otherwise.
+    int updateSnake(const sf::Keyboard::Key&, sf::Vector2f);
+    void displaySnake(sf::RenderWindow&);
+    // checks for collision with self and borders defined in Definitions/ResolutionVariables.h
+    bool collision();
 };
 
 #endif //SNAKE_SNAKE_H

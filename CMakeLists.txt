@@ -3,8 +3,18 @@ project(snake)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
-set(SOURCE_FILES main.cpp GameLogic/PlayerMove.cpp GameLogic/PlayerMove.h GameObjects/Board.cpp GameObjects/Board.h GameObjects/Snake.cpp GameObjects/Snake.h)
-add_executable(snake ${SOURCE_FILES})
+file(GLOB snake_SRC
+    "*.h"
+    "*.cpp"
+    "GameLogic/*.cpp"
+    "GameLogic/*.h"
+    "GameObjects/*.cpp"
+    "GameObjects/*.h"
+    "Definitions/*.h"
+)
+
+add_executable(snake ${snake_SRC})
+
 set(CMAKE_PREFIX_PATH PATH "C:\\SFML-2.3.2")
 
 # Detect and add SFML

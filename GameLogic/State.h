@@ -1,11 +1,14 @@
-#ifndef stateH
-#define  stateH
+#ifndef __STATE_H__
+#define __STATE_H__
+
+#include <SFML/Graphics/RenderWindow.hpp>
+#include <SFML/Window/Keyboard.hpp>
 
 class State
 {
 public:
-  virtual void update();
-  virtual void draw();
+  virtual void update(const sf::Keyboard::Key&) = 0;
+  virtual void drawState(sf::RenderWindow&) = 0;
 };
 
 #endif

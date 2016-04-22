@@ -13,7 +13,7 @@ private:
     Keyboard::Key currentDirection;
 public:
     PlayerMove();
-    void changeDirection();
+    void setDirection(const sf::Keyboard::Key&);
     Keyboard::Key getDirection();
 };
 
