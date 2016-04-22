@@ -1,6 +1,6 @@
 # SnakePong
 
-Please don't push directly to master like calvin
+Please don't push directly to master!!
 
 ENSURE project
 
