@@ -5,4 +5,6 @@
 #ifndef SNAKE_GAMEOVERSTATE_H
 #define SNAKE_GAMEOVERSTATE_H
 
+#include "StateManager.h"
+
 #endif //SNAKE_GAMEOVERSTATE_H

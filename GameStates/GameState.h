@@ -1,6 +1,7 @@
 #ifndef gameStateH
 #define gameStateH
 
+#include "StateManager.h"
 #include "State.h"
 #include "../GameObjects/Fruit.h"
 #include "../GameObjects/Snake.h"

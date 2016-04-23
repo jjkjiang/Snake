@@ -1,6 +1,8 @@
 #ifndef __MENUSTATE_H__
 #define __MENUSTATE_H__
 
+#include "StateManager.h"
+
 #include "State.h"
 #include "../GameObjects/TileMap.h"
 
