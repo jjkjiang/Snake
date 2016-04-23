@@ -1,7 +1,6 @@
 #ifndef STATEMAN_H
 #define STATEMAN_H
 
-
 #include "MenuState.h"
 #include "GameState.h"
 

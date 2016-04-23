@@ -106,7 +106,10 @@ void Snake::displaySnake(sf::RenderWindow& window) {
 // checks if the snake collides into itself or the borders
 bool Snake::collision() {
     sf::Vector2f currPos = head->shape.getPosition();
-    if (currPos.x > borderRight || currPos.x < borderLeft || currPos.y > borderBottom || currPos.y < borderTop) {
+    if (currPos.x >= borderRight ||
+        currPos.x <= borderLeft ||
+        currPos.y >= borderBottom ||
+        currPos.y <= borderTop) {
         return true;
     }
     for (SnakeBody* i = head->next; i != 0; i = i->next) {
