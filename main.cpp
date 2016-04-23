@@ -4,17 +4,18 @@
 #include <stdexcept>
 #include "GameObjects/Snake.h"
 #include "GameObjects/Fruit.h"
-#include "GameStates/GameState.h"
+#include "GameStates/StateManager.h"
 #include "Definitions/Logic.h"
 #include "Definitions/ResolutionVariables.h"
 
 int main() {
-    // create the window
+    // // create the window
     sf::RenderWindow window(sf::VideoMode(screenResWidth, screenResHeight), "Snake");
 
     // initialize states and a variable to hold the last keyboard press by the user.
     sf::Keyboard::Key press;
-    GameState gameState;
+    // GameState gameState;
+    StateManager state;
     while (window.isOpen()) {
         // create event
         sf::Event event;
@@ -27,10 +28,15 @@ int main() {
                 press = event.key.code;
             }
         }
-        //draws objects then updates
-        gameState.drawState(window);
-        gameState.update(press);
+        // // //draws objects then updates
+        // gameState.update(press);
+        // gameState.drawState(window);
+
+
+    state.update(press);
+    state.drawState(window);
     }
+
 
     return 0;
 }
