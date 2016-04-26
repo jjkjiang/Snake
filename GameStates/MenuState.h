@@ -9,11 +9,7 @@
 class MenuState : public State {
 private:
     TileMap menuBg;
-    sf::RectangleShape snakeLogo;
-    sf::RectangleShape startSnakeButton;
-    //sf::RectangleShape startSnakePongButton;
-    //sf::RectangleShape optionsButton;
-    sf::RectangleShape exitButton;
+    Button play;
 public:
     MenuState();
     virtual void update(const sf::Keyboard::Key&);

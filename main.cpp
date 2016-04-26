@@ -9,7 +9,6 @@
 #include "Definitions/ResolutionVariables.h"
 
 int main() {
-    // // create the window
     sf::RenderWindow window(sf::VideoMode(screenResWidth, screenResHeight), "Snake");
 
     // initialize states and a variable to hold the last keyboard press by the user.
@@ -17,7 +16,6 @@ int main() {
     // GameState gameState;
     StateManager state;
     while (window.isOpen()) {
-        // create event
         sf::Event event;
 
         // event loop
