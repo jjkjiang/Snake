@@ -13,8 +13,9 @@ int main() {
 
     // initialize states and a variable to hold the last keyboard press by the user.
     sf::Keyboard::Key press;
-    // GameState gameState;
-    StateManager state;
+    //GameState gameState;
+    MenuState menuState;
+    //StateManager state;
     while (window.isOpen()) {
         sf::Event event;
 
@@ -27,12 +28,13 @@ int main() {
             }
         }
         // // //draws objects then updates
-        // gameState.update(press);
-        // gameState.drawState(window);
+        //gameState.update(press);
+        //gameState.drawState(window);
+        menuState.update(press);
+        menuState.drawState(window);
 
-
-    state.update(press);
-    state.drawState(window);
+    //state.update(press);
+    //tate.drawState(window);
     }
 
 

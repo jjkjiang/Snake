@@ -18,7 +18,7 @@ private:
 public:
     MenuState();
     virtual void update(sf::Keyboard::Key&);
-    virtual void drawState(sf::RenderWindow& window);
+    virtual void drawState(sf::RenderWindow&);
 };
 
 #endif

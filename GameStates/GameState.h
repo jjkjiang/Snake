@@ -1,5 +1,5 @@
-#ifndef gameStateH
-#define gameStateH
+#ifndef __GAMESTATE_H__
+#define __GAMESTATE_H__
 
 #include "StateManager.h"
 #include "State.h"
@@ -22,7 +22,7 @@ private:
 public:
     GameState();
     virtual void update(sf::Keyboard::Key&);
-    virtual void drawState(sf::RenderWindow& window);
+    virtual void drawState(sf::RenderWindow&);
 };
 
 #endif

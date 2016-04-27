@@ -11,10 +11,10 @@ const int borderTop = pixelSizeY;
 const int borderBottom = screenResHeight - pixelSizeY;
 const unsigned xPixels = screenResWidth / pixelSizeX;
 const unsigned yPixels = screenResHeight / pixelSizeY;
-const std::string gameResPath = "res/tileset2.png";
-const std::string menuResPath = "res/tileset.png"; // decide later
+const std::string gameResPath = "res/tileset4.png";
+const std::string menuResPath = "res/tileset5.png"; // decide later
 
 const int buttonSizeX = 10 * pixelSizeX;
-const int buttonSizeY = 5 * pixelSizeY;
+const int buttonSizeY = 4 * pixelSizeY;
 
 #endif

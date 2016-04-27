@@ -19,7 +19,7 @@ public:
 
     SnakeBody(const sf::Vector2f& position, const sf::Keyboard::Key dir) {
         shape = sf::RectangleShape(sf::Vector2f(pixelSizeX, pixelSizeY));
-        shape.setFillColor(sf::Color::Green);
+        shape.setFillColor(sf::Color(84, 191, 88));
         shape.setPosition(position);
         next = 0;
         prev = 0;

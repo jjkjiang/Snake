@@ -9,6 +9,8 @@
 #include <SFML/Graphics/RectangleShape.hpp>
 #include <SFML/Graphics/Text.hpp>
 #include <SFML/Graphics/RenderWindow.hpp>
+#include <string>
+#include "../Definitions/FontLoading.h"
 
 // button class that creates a button of resolution variable defined sizes.
 // work in progress
@@ -18,7 +20,8 @@ private:
     sf::Text buttonText;
     bool active;
 public:
-    Button(const sf::String&, sf::Vector2f);
+    Button();
+    Button(std::string, sf::Vector2f, sf::Font);
     bool isActive();
     void activate();
     void deactivate();
