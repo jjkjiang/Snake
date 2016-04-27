@@ -5,14 +5,19 @@
 
 #include "State.h"
 #include "../GameObjects/TileMap.h"
+#include "../GameObjects/Button.h"
 
 class MenuState : public State {
 private:
     TileMap menuBg;
-    Button play;
+    int arrSize;
+    int activeIndex;
+    Button buttonArr[2];
+    Button playButton;
+    Button exitButton;
 public:
     MenuState();
-    virtual void update(const sf::Keyboard::Key&);
+    virtual void update(sf::Keyboard::Key&);
     virtual void drawState(sf::RenderWindow& window);
 };
 

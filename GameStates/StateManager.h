@@ -12,7 +12,7 @@ private:
 
 public:
   StateManager();
-  void update(const sf::Keyboard::Key&);
+  void update(sf::Keyboard::Key&);
   void drawState(sf::RenderWindow&);
 };
 #endif

@@ -10,7 +10,7 @@ GameState::GameState() {
 
 // updates the game's status by moving forward the snake, detecting if the snake has hit the wall
 // changes the speed of the snake based on 1, 2, 3.
-void GameState::update(const sf::Keyboard::Key& press) {
+void GameState::update(sf::Keyboard::Key& press) {
     if (press == sf::Keyboard::Num1) {
         updateTime = 1;
     } else if (press == sf::Keyboard::Num2) {
