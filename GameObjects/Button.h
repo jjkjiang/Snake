@@ -21,7 +21,7 @@ private:
     bool active;
 public:
     Button();
-    Button(std::string, sf::Vector2f, sf::Font);
+    Button(std::string, sf::Vector2f, sf::Font&);
     bool isActive();
     void activate();
     void deactivate();

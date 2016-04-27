@@ -2,12 +2,7 @@
 #include "../Definitions/ResolutionVariables.h"
 #include "../Definitions/Logic.h"
 
-MenuState::MenuState() {
-    sf::Font mainFont;
-    if (!mainFont.loadFromFile("TerminusTTF.ttf")) {
-        throw std::runtime_error("Can't load mainfont");
-    }
-
+MenuState::MenuState(sf::Font& mainFont) {
     if (!menuBg.load(menuResPath, sf::Vector2u(pixelSizeX, pixelSizeY), level, xPixels, yPixels))
         throw std::runtime_error("Failed to load the tilemap probably because file was not found.");
 

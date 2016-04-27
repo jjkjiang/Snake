@@ -16,7 +16,7 @@ private:
     Button playButton;
     Button exitButton;
 public:
-    MenuState();
+    MenuState(sf::Font&);
     virtual void update(sf::Keyboard::Key&);
     virtual void drawState(sf::RenderWindow&);
 };

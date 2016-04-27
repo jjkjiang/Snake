@@ -5,22 +5,21 @@
 #include "Button.h"
 #include "../Definitions/ResolutionVariables.h"
 
-
 Button::Button() {}
 
-Button::Button(std::string text, sf::Vector2f location, sf::Font mainFont) {
+Button::Button(std::string text, sf::Vector2f location, sf::Font& mainFont) {
     buttonBackground.setPosition(location);
     buttonBackground.setSize(sf::Vector2f(buttonSizeX , buttonSizeY));
     buttonBackground.setFillColor(sf::Color::Black);
     buttonBackground.setOutlineColor(sf::Color::White);
     buttonBackground.setOutlineThickness(pixelSizeX);
 
-    location.x += pixelSizeX;
-    location.y += pixelSizeY;
+    location.x += pixelSizeX * 2;
+    //location.y += pixelSizeY;
     buttonText.setString(text);
-    buttonText.setCharacterSize(yPixels);
+    buttonText.setCharacterSize(yPixels * 4);
     buttonText.setPosition(location);
-    //buttonText.setFont(mainFont);
+    buttonText.setFont(mainFont);
     buttonText.setColor(sf::Color::White);
     active = false;
 }

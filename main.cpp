@@ -10,11 +10,14 @@
 
 int main() {
     sf::RenderWindow window(sf::VideoMode(screenResWidth, screenResHeight), "Snake");
-
+    sf::Font mainFont;
+    if (!mainFont.loadFromFile("TerminusTTF.ttf")) {
+        throw std::runtime_error("Can't load mainfont");
+    }
     // initialize states and a variable to hold the last keyboard press by the user.
     sf::Keyboard::Key press;
     //GameState gameState;
-    MenuState menuState;
+    MenuState menuState(mainFont);
     //StateManager state;
     while (window.isOpen()) {
         sf::Event event;
