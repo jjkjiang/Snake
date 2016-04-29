@@ -10,7 +10,6 @@
 #include <SFML/Graphics/Text.hpp>
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <string>
-#include "../Definitions/FontLoading.h"
 
 // button class that creates a button of resolution variable defined sizes.
 // work in progress

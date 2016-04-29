@@ -1,6 +1,6 @@
 #include "MenuState.h"
 #include "../Definitions/ResolutionVariables.h"
-#include "../Definitions/Logic.h"
+#include "../Definitions/TileMapArr.h"
 
 MenuState::MenuState(sf::Font& mainFont) {
     if (!menuBg.load(menuResPath, sf::Vector2u(pixelSizeX, pixelSizeY), level, xPixels, yPixels))
@@ -12,6 +12,12 @@ MenuState::MenuState(sf::Font& mainFont) {
     playButton = Button("PLAY", playButtonLocation, mainFont);
     exitButton = Button("EXIT", exitButtonLocation, mainFont);
     playButton.activate();
+
+    introText.setString("SNAKE!");
+    introText.setColor(sf::Color(84, 191, 88));
+    introText.setPosition(screenResWidth / 2 - buttonSizeX + pixelSizeX, screenResHeight / 2 - 3 * buttonSizeY);
+    introText.setCharacterSize(210);
+    introText.setFont(mainFont);
     //buttonArr[0] = playButton;
     //buttonArr[1] = exitButton;
     //arrSize = 2;
@@ -50,5 +56,6 @@ void MenuState::drawState(sf::RenderWindow& window) {
     window.draw(menuBg);
     playButton.drawButton(window);
     exitButton.drawButton(window);
+    window.draw(introText);
     window.display();
 }

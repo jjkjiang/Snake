@@ -5,13 +5,13 @@
 #include "GameObjects/Snake.h"
 #include "GameObjects/Fruit.h"
 #include "GameStates/StateManager.h"
-#include "Definitions/Logic.h"
+#include "Definitions/TileMapArr.h"
 #include "Definitions/ResolutionVariables.h"
 
 int main() {
     sf::RenderWindow window(sf::VideoMode(screenResWidth, screenResHeight), "Snake");
     sf::Font mainFont;
-    if (!mainFont.loadFromFile("TerminusTTF.ttf")) {
+    if (!mainFont.loadFromFile("VTSR.ttf")) {
         throw std::runtime_error("Can't load mainfont");
     }
     // initialize states and a variable to hold the last keyboard press by the user.

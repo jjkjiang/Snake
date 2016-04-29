@@ -15,6 +15,7 @@ private:
     Button buttonArr[2];
     Button playButton;
     Button exitButton;
+    sf::Text introText;
 public:
     MenuState(sf::Font&);
     virtual void update(sf::Keyboard::Key&);

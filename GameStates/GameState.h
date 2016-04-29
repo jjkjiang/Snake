@@ -6,7 +6,7 @@
 #include "../GameObjects/Fruit.h"
 #include "../GameObjects/Snake.h"
 #include "../GameObjects/TileMap.h"
-#include "../Definitions/Logic.h"
+#include "../Definitions/TileMapArr.h"
 #include "../Definitions/ResolutionVariables.h"
 #include <stdexcept>
 
