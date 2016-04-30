@@ -9,7 +9,7 @@ class State
 {
 public:
     // all updates will take in the last pressed key from the event loop
-  virtual void update(sf::Keyboard::Key&) = 0;
+  virtual int update(sf::Keyboard::Key&) = 0;
     // all the draws will take in the main window to draw with
   virtual void drawState(sf::RenderWindow&) = 0;
 };

@@ -2,11 +2,10 @@
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
 #include <stdexcept>
-#include "GameObjects/Snake.h"
-#include "GameObjects/Fruit.h"
 #include "GameStates/StateManager.h"
 #include "Definitions/TileMapArr.h"
 #include "Definitions/ResolutionVariables.h"
+#include "GameLogic/GameEngine.h"
 
 int main() {
     sf::RenderWindow window(sf::VideoMode(screenResWidth, screenResHeight), "Snake");
@@ -17,11 +16,11 @@ int main() {
     // initialize states and a variable to hold the last keyboard press by the user.
     sf::Keyboard::Key press;
     //GameState gameState;
-    MenuState menuState(mainFont);
-    //StateManager state;
+    //MenuState menuState(mainFont);
+    GameEngine gameEngine;
+    gameEngine.init(mainFont);
     while (window.isOpen()) {
         sf::Event event;
-
         // event loop
         while (window.pollEvent(event)) {
             if(event.type == sf::Event::Closed)
@@ -33,8 +32,8 @@ int main() {
         // // //draws objects then updates
         //gameState.update(press);
         //gameState.drawState(window);
-        menuState.update(press);
-        menuState.drawState(window);
+        gameEngine.update(press);
+        gameEngine.drawState(window);
 
     //state.update(press);
     //tate.drawState(window);

@@ -21,7 +21,7 @@ private:
     float updateTime;
 public:
     GameState();
-    virtual void update(sf::Keyboard::Key&);
+    virtual int update(sf::Keyboard::Key&);
     virtual void drawState(sf::RenderWindow&);
 };
 

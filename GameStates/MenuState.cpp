@@ -24,7 +24,8 @@ MenuState::MenuState(sf::Font& mainFont) {
     //activeIndex = 0;
     //snakeLogo;
 }
-void MenuState::update(sf::Keyboard::Key& press) {
+
+int MenuState::update(sf::Keyboard::Key& press) {
     if (press == sf::Keyboard::Down) {
         if (playButton.isActive()) {
             playButton.deactivate();
@@ -46,9 +47,10 @@ void MenuState::update(sf::Keyboard::Key& press) {
         press = sf::Keyboard::Left;
     }
     if (press == sf::Keyboard::Return) {
-        if (activeIndex == 0); //play game
-        if (activeIndex == 1); //exit game
+        if (playButton.isActive()) return 1;
+        if (exitButton.isActive()) return -1;
     }
+    return 0;
 }
 
 void MenuState::drawState(sf::RenderWindow& window) {

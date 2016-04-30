@@ -10,7 +10,7 @@ GameState::GameState() {
 
 // updates the game's status by moving forward the snake, detecting if the snake has hit the wall
 // changes the speed of the snake based on 1, 2, 3.
-void GameState::update(sf::Keyboard::Key& press) {
+int GameState::update(sf::Keyboard::Key& press) {
     if (press == sf::Keyboard::Num1) {
         updateTime = 1;
     } else if (press == sf::Keyboard::Num2) {
@@ -23,9 +23,14 @@ void GameState::update(sf::Keyboard::Key& press) {
         int result = player1.updateSnake(press, player1Fruit.getPos());
         if (result == 1) {
             player1Fruit.resetFruit();
+        } else if (result == 2) {
+            // player crashed into something - game ends
+            return 2;
         }
         gameClock.restart();
     }
+
+    return 0;
 }
 
 // clears the screen (so if the previous screen was a menu, that will be cleared), draws the background,

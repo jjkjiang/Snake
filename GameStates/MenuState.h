@@ -10,15 +10,15 @@
 class MenuState : public State {
 private:
     TileMap menuBg;
-    int arrSize;
-    int activeIndex;
-    Button buttonArr[2];
+    //int arrSize;
+    //int activeIndex;
+    //Button buttonArr[2];
     Button playButton;
     Button exitButton;
     sf::Text introText;
 public:
     MenuState(sf::Font&);
-    virtual void update(sf::Keyboard::Key&);
+    virtual int update(sf::Keyboard::Key&);
     virtual void drawState(sf::RenderWindow&);
 };
 
