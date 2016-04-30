@@ -20,6 +20,10 @@ private:
     float updateTime;
     sf::Text scoreCounter;
     sf::Text controlHeader;
+    sf::Text movementHeader;
+    sf::Text speedHeader;
+    sf::Texture controlsTexture;
+    sf::Sprite controls;
 public:
     GameState(sf::Font&);
     virtual int update(sf::Keyboard::Key&);

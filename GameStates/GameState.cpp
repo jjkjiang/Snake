@@ -15,6 +15,21 @@ GameState::GameState(sf::Font& mainFont) {
     controlHeader.setCharacterSize(25);
     controlHeader.setFont(mainFont);
     controlHeader.setString("Controls:");
+
+    movementHeader.setPosition(borderRight + pixelSizeX + pixelSizeX / 2, 4 * pixelSizeY);
+    movementHeader.setCharacterSize(25);
+    movementHeader.setFont(mainFont);
+    movementHeader.setString(" Movement");
+
+    speedHeader.setPosition(borderRight + pixelSizeX + pixelSizeX / 2, 14 * pixelSizeY);
+    speedHeader.setCharacterSize(25);
+    speedHeader.setFont(mainFont);
+    speedHeader.setString("  Speed");
+
+    if (!controlsTexture.loadFromFile("res/controls.png"))
+        throw std::runtime_error("Could not load controls.png");
+    controls.setTexture(controlsTexture);
+    controls.setPosition(borderRight + pixelSizeX, 4 * pixelSizeY);
 }
 
 // updates the game's status by moving forward the snake, detecting if the snake has hit the wall
@@ -48,8 +63,11 @@ int GameState::update(sf::Keyboard::Key& press) {
 void GameState::drawState(sf::RenderWindow& window) {
     window.clear();
     window.draw(gameMap);
+    window.draw(controls);
     window.draw(scoreCounter);
     window.draw(controlHeader);
+    window.draw(speedHeader);
+    window.draw(movementHeader);
     player1Fruit.drawFruit(window);
     player1.displaySnake(window);
     window.display();
