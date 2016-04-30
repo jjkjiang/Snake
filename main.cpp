@@ -2,7 +2,6 @@
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
 #include <stdexcept>
-#include "GameStates/StateManager.h"
 #include "Definitions/TileMapArr.h"
 #include "Definitions/ResolutionVariables.h"
 #include "GameLogic/GameEngine.h"

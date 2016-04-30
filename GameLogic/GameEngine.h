@@ -13,7 +13,7 @@
 
 class GameEngine {
 private:
-    std::stack<State> game;
+    std::stack<State*> game;
 public:
     void init(sf::Font&);
     void update(sf::Keyboard::Key&);
