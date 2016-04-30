@@ -25,7 +25,7 @@ MenuState::MenuState(sf::Font& mainFont) {
     //snakeLogo;
 }
 
-int MenuState::update(sf::Keyboard::Key& press) {
+int MenuState::update(sf::Keyboard::Key& press, ScoreBoard* scoreBoard) {
     if (press == sf::Keyboard::Down) {
         if (playButton.isActive()) {
             playButton.deactivate();

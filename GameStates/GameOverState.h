@@ -15,8 +15,8 @@ class GameOverState : public State {
 private:
     //databasething* database
     std::stringstream convert;
+    std::stringstream name;
     TileMap gameOverBg;
-    std::string userName;
     sf::Text gameOver;
     sf::Text yourScore;
     sf::Text highScore;
@@ -29,8 +29,9 @@ private:
     bool enteredSecond;
     bool enteredThird;
 public:
-    GameOverState(sf::Font&);
-    virtual int update(sf::Keyboard::Key&);
+    GameOverState(sf::Font&, ScoreBoard*);
+    int updateNameEntry(sf::Keyboard::Key&, ScoreBoard*);
+    virtual int update(sf::Keyboard::Key&, ScoreBoard*);
     virtual void drawState(sf::RenderWindow&);
 };
 

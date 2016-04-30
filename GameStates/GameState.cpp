@@ -34,7 +34,7 @@ GameState::GameState(sf::Font& mainFont) {
 
 // updates the game's status by moving forward the snake, detecting if the snake has hit the wall
 // changes the speed of the snake based on 1, 2, 3.
-int GameState::update(sf::Keyboard::Key& press) {
+int GameState::update(sf::Keyboard::Key& press, ScoreBoard* scoreBoard) {
     if (press == sf::Keyboard::Num1) {
         updateTime = 0.5;
     } else if (press == sf::Keyboard::Num2) {
@@ -50,6 +50,10 @@ int GameState::update(sf::Keyboard::Key& press) {
             player1Fruit.resetFruit();
         } else if (result == 2) {
             // player crashed into something - game ends
+            std::stringstream convert;
+            convert.str(", ");
+            convert << player1.getScore();
+            scoreBoard->setLastScore(convert.str());
             return 3;
         }
         gameClock.restart();

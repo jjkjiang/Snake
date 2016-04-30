@@ -3,13 +3,14 @@
 
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <SFML/Window/Keyboard.hpp>
+#include "../GameLogic/ScoreBoard.h"
 
 // abstract base class
 class State
 {
 public:
     // all updates will take in the last pressed key from the event loop
-  virtual int update(sf::Keyboard::Key&) = 0;
+  virtual int update(sf::Keyboard::Key&, ScoreBoard*) = 0;
     // all the draws will take in the main window to draw with
   virtual void drawState(sf::RenderWindow&) = 0;
 };

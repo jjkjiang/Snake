@@ -7,7 +7,7 @@
 
 GameEngine::GameEngine(sf::Font* mainFont) {
     std::string fileName = "highScores.db";
-    scoreBoard = new ScoreBoard(fileName.c_str());
+    scoreBoard = new ScoreBoard(fileName);
     this->mainFont = mainFont;
 }
 
@@ -16,7 +16,7 @@ void GameEngine::init() {
 }
 
 void GameEngine::update(sf::Keyboard::Key& press) {
-    int keyCode = game.top()->update(press);
+    int keyCode = game.top()->update(press, scoreBoard);
 
     if (keyCode == 1) { // keycode 1 is the signal to start a game
         game.push(new GameState(*mainFont));
@@ -27,7 +27,7 @@ void GameEngine::update(sf::Keyboard::Key& press) {
         game.pop();
         game.push(new GameState(*mainFont));
     } else if (keyCode == 3) { // keycode 3 is the signal of game over
-        game.push(new GameOverState(*mainFont));
+        game.push(new GameOverState(*mainFont, scoreBoard));
     } else if (keyCode == 4) { // keycode 4 is the signal of return to menu from gameover
         delete game.top();
         game.pop();

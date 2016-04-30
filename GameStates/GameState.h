@@ -26,7 +26,7 @@ private:
     sf::Sprite controls;
 public:
     GameState(sf::Font&);
-    virtual int update(sf::Keyboard::Key&);
+    virtual int update(sf::Keyboard::Key&, ScoreBoard*);
     virtual void drawState(sf::RenderWindow&);
 };
 
