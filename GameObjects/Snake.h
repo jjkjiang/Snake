@@ -41,6 +41,7 @@ public:
     // creates a snake head with body of default size x.
     Snake();
     ~Snake();
+    int getScoreInt();
     void moveDir(const Vector2f&);
     void eatFruit(const Vector2f&);
     std::string getScore();

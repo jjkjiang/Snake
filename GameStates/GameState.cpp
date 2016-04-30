@@ -50,10 +50,7 @@ int GameState::update(sf::Keyboard::Key& press, ScoreBoard* scoreBoard) {
             player1Fruit.resetFruit();
         } else if (result == 2) {
             // player crashed into something - game ends
-            std::stringstream convert;
-            convert.str(", ");
-            convert << player1.getScore();
-            scoreBoard->setLastScore(convert.str());
+            scoreBoard->setLastScore(player1.getScoreInt());
             return 3;
         }
         gameClock.restart();

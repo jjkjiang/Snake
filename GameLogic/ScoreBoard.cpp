@@ -68,7 +68,7 @@ void ScoreBoard::write(string name, int score)
 
 string ScoreBoard::getHighScore()
 {
-  if(!scores.empty())_
+  if(!scores.empty())
   {
 
     stringstream score;
@@ -78,10 +78,10 @@ string ScoreBoard::getHighScore()
   return "";
 }
 
-void ScoreBoard::setLastScore(const string& newScore) {
+void ScoreBoard::setLastScore(const int& newScore) {
     lastScore = newScore;
 }
 
-string ScoreBoard::getLastScore() {
+int ScoreBoard::getLastScore() {
     return lastScore;
 }

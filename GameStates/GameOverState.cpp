@@ -29,17 +29,18 @@ GameOverState::GameOverState(sf::Font& mainFont, ScoreBoard* scoreBoard) {
     enteredSecond = false;
     enteredThird = false;
 
-    yourScore.setString(scoreBoard->getLastScore());
+    //yourScore.setString(scoreBoard->getLastScore());
+    restartButtonLocation.y -= pixelSizeY * 3;
     yourScore.setFont(mainFont);
     yourScore.setCharacterSize(pixelSizeX * 2);
     yourScore.setPosition(restartButtonLocation);
 
+    returnButtonLocation.y -= pixelSizeY * 3;
     highScore.setString(scoreBoard->getHighScore());
     highScore.setFont(mainFont);
     highScore.setCharacterSize(pixelSizeX * 2);
     highScore.setPosition(returnButtonLocation);
 
-    restartButtonLocation.y -= pixelSizeY * 3;
     restartButtonLocation.x += pixelSizeX * 2;
     letterOne.setString("A");
     letterOne.setCharacterSize(pixelSizeX * 2);
@@ -126,17 +127,22 @@ int GameOverState::updateNameEntry(sf::Keyboard::Key& press, ScoreBoard* scoreBo
             enteredSecond = true;
             letterTwo.setColor(sf::Color::White);
             letterThree.setColor(sf::Color(84, 191, 88));
-            string temp = letterOne.getString();
+            string temp = letterTwo.getString();
             name << temp;
         } else {
             enteredThird = true;
             letterThree.setColor(sf::Color::White);
             restartButton.activate();
-            string temp = letterOne.getString();
+            string temp = letterThree.getString();
             name << temp;
+            int score = scoreBoard->getLastScore();
             std::string resultString = name.str();
-            resultString += scoreBoard->getLastScore();
-            //scoreBoard->write()
+            scoreBoard->write(resultString, score);
+            resultString += ", ";
+            convert.str("");
+            convert << score;
+            resultString += convert.str();
+            yourScore.setString(resultString);
         }
     }
     press = sf::Keyboard::Unknown;
@@ -181,12 +187,13 @@ void GameOverState::drawState(sf::RenderWindow& window) {
     window.draw(gameOverBg);
     window.draw(gameOver);
     window.draw(highScore);
+
     if (!enteredThird) {
         window.draw(letterOne);
         window.draw(letterTwo);
         window.draw(letterThree);
     } else {
-
+        window.draw(yourScore);
     }
     restartButton.drawButton(window);
     returnButton.drawButton(window);

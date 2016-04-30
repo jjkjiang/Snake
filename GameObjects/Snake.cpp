@@ -36,6 +36,10 @@ Snake::~Snake() {
     tail = 0;
 }
 
+int Snake::getScoreInt() {
+    return size - 8;
+}
+
 std::string Snake::getScore() {
     std::stringstream conversion;
     conversion << "Score: " << (size - 8);

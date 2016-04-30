@@ -24,10 +24,10 @@ private:
   //greatest score will be first in vector
   vector<Score> scores;
   vector<Score> read();
-    string lastScore;
+    int lastScore;
 public:
-    void setLastScore(const string&);
-    string getLastScore();
+    void setLastScore(const int&);
+    int getLastScore();
   ScoreBoard(const string& filePath);
   void write(string name, int score);
   string getHighScore();
