@@ -21,7 +21,9 @@ void GameEngine::update(sf::Keyboard::Key& press) {
         game.pop();
         game.push(new GameState());
     } else if (keyCode == 3) { // keycode 3 is the signal of game over
-        game.push(new GameOverState(*mainFont));
+        //game.push(new GameOverState(*mainFont));
+        delete game.top();
+        game.pop();
     } else if (keyCode == 4) { // keycode 4 is the signal of return to menu from gameover
         delete game.top();
         game.pop();
