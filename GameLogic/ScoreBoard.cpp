@@ -77,3 +77,11 @@ string ScoreBoard::getHighScore()
   }
   return "";
 }
+
+void ScoreBoard::setLastScore(const string& newScore) {
+    lastScore = newScore;
+}
+
+string ScoreBoard::getLastScore() {
+    return lastScore;
+}
