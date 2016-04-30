@@ -27,6 +27,7 @@ private:
 public:
   ScoreBoard(const string& filePath);
   void write(string name, int score);
+  string getHighScore();
 
 };
 
