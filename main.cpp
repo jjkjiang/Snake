@@ -12,12 +12,12 @@ int main() {
     if (!mainFont->loadFromFile("VTSR.ttf")) {
         throw std::runtime_error("Can't load mainfont");
     }
-    // initialize states and a variable to hold the last keyboard press by the user.
+
+    // press is a variable that holds the current "button" pressed used for updates
     sf::Keyboard::Key press;
-    //GameState gameState;
-    //MenuState menuState(mainFont);
     GameEngine gameEngine;
     gameEngine.init(mainFont);
+
     while (window.isOpen()) {
         sf::Event event;
         // event loop
@@ -28,14 +28,8 @@ int main() {
                 press = event.key.code;
             }
         }
-        // // //draws objects then updates
-        //gameState.update(press);
-        //gameState.drawState(window);
         gameEngine.update(press);
         gameEngine.drawState(window);
-
-    //state.update(press);
-    //tate.drawState(window);
     }
 
 

@@ -28,8 +28,8 @@ bool Button::isActive() {
     return active;
 }
 void Button::activate() {
-    buttonBackground.setOutlineColor(sf::Color::Green);
-    buttonText.setColor(sf::Color::Green);
+    buttonBackground.setOutlineColor(sf::Color(84, 191, 88));
+    buttonText.setColor(sf::Color(84, 191, 88));
     active = true;
 }
 void Button::deactivate() {

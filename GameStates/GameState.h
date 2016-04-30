@@ -18,8 +18,10 @@ private:
     Snake player1;
     Clock gameClock;
     float updateTime;
+    sf::Text scoreCounter;
+    sf::Text controlHeader;
 public:
-    GameState();
+    GameState(sf::Font&);
     virtual int update(sf::Keyboard::Key&);
     virtual void drawState(sf::RenderWindow&);
 };

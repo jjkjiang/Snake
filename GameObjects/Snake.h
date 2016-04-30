@@ -7,6 +7,7 @@
 
 #include <SFML/Graphics.hpp>
 #include "../GameLogic/PlayerMove.h"
+#include <sstream>
 #include "../Definitions/ResolutionVariables.h"
 
 // makes up the body of the snake, dir will be used to calculate the physics of pong balls later on.
@@ -36,13 +37,13 @@ private:
     // use playermove class to get the direction for snake movement updates
     PlayerMove playerMove;
     sf::CircleShape headShape;
-
 public:
     // creates a snake head with body of default size x.
     Snake();
     ~Snake();
     void moveDir(const Vector2f&);
     void eatFruit(const Vector2f&);
+    std::string getScore();
     // returns 1 if a fruit was encountered, 2 if you collide, 0 otherwise.
     int updateSnake(const sf::Keyboard::Key&, sf::Vector2f);
     void displaySnake(sf::RenderWindow&);

@@ -47,6 +47,7 @@ int MenuState::update(sf::Keyboard::Key& press) {
         press = sf::Keyboard::Left;
     }
     if (press == sf::Keyboard::Return) {
+        press = sf::Keyboard::Unknown;
         if (playButton.isActive()) return 1;
         if (exitButton.isActive()) return -1;
     }

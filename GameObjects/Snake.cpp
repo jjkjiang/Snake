@@ -36,6 +36,12 @@ Snake::~Snake() {
     tail = 0;
 }
 
+std::string Snake::getScore() {
+    std::stringstream conversion;
+    conversion << "Score: " << (size - 8);
+    return conversion.str();
+}
+
 // moves the snake by adding a new head and deleting the tail
 // this is more efficient than moving each part of the snake
 void Snake::moveDir(const Vector2f& nextPos) {
@@ -67,7 +73,6 @@ int Snake::updateSnake(const sf::Keyboard::Key& dir, sf::Vector2f fruitPos) {
     sf::Keyboard::Key movementDir = playerMove.getDirection();
 
     if (collision()) {
-        //do something idk yet
         return 2;
     }
 

@@ -8,7 +8,7 @@
 // used to create random positions of the fruit for initialization and resetting
 sf::Vector2f Fruit::randomPos() {
     srand(time(0));
-    int posX = ((rand() % (xPixels - 2)) + 1) * pixelSizeX;
+    int posX = ((rand() % (xPixels - 9)) + 1) * pixelSizeX;
     int posY = ((rand() % (yPixels - 2)) + 1) * pixelSizeY;
     return sf::Vector2f(posX, posY);
 }
