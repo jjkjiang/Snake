@@ -4,7 +4,7 @@
 GameState::GameState(sf::Font& mainFont) {
     if (!gameMap.load(gameResPath, sf::Vector2u(pixelSizeX, pixelSizeY), level, xPixels, yPixels))
         throw std::runtime_error("Failed to load the tilemap probably because file was not found.");
-    updateTime = 1;
+    updateTime = 0.5;
 
     scoreCounter.setPosition(borderRight + pixelSizeX + pixelSizeX / 2, pixelSizeY);
     scoreCounter.setCharacterSize(25);
@@ -36,11 +36,11 @@ GameState::GameState(sf::Font& mainFont) {
 // changes the speed of the snake based on 1, 2, 3.
 int GameState::update(sf::Keyboard::Key& press) {
     if (press == sf::Keyboard::Num1) {
-        updateTime = 1;
-    } else if (press == sf::Keyboard::Num2) {
         updateTime = 0.5;
-    } else if (press == sf::Keyboard::Num3) {
+    } else if (press == sf::Keyboard::Num2) {
         updateTime = 0.2;
+    } else if (press == sf::Keyboard::Num3) {
+        updateTime = 0.1;
     }
 
     if (gameClock.getElapsedTime().asSeconds() >= updateTime) {
