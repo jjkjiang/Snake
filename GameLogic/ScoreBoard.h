@@ -20,6 +20,7 @@ class ScoreBoard
 {
 private:
   string saveFile;
+  //greatest score will be first in vector
   vector<Score> scores;
   vector<Score> read();
 public:
