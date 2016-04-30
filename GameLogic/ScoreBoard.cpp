@@ -1,5 +1,6 @@
 #include "ScoreBoard.h"
 #include <stdexcept>
+#include <sstream>
 using namespace std;
 
 ScoreBoard::ScoreBoard(const string& filePath):saveFile(filePath)
@@ -63,4 +64,12 @@ void ScoreBoard::write(string name, int score)
   save.close();
 
 
+}
+
+string ScoreBoard::getHighScore()
+{
+  stringstream score;
+  score << scores.at(0).name << " " << scores.at(0).score;
+
+  return score.str();
 }
