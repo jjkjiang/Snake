@@ -72,7 +72,7 @@ string ScoreBoard::getHighScore()
   {
 
     stringstream score;
-    score << scores.at(0).name << " " << scores.at(0).score;
+    score << scores.at(0).name << ", " << scores.at(0).score;
     return score.str();
   }
   return "";
@@ -84,4 +84,8 @@ void ScoreBoard::setLastScore(const int& newScore) {
 
 int ScoreBoard::getLastScore() {
     return lastScore;
+}
+
+int ScoreBoard::getHighScoreInt() {
+    return scores.at(0).score;
 }

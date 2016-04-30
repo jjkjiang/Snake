@@ -2,7 +2,7 @@
 #include "../Definitions/ResolutionVariables.h"
 #include "../Definitions/TileMapArr.h"
 
-MenuState::MenuState(sf::Font& mainFont) {
+MenuState::MenuState(sf::Font& mainFont, ScoreBoard* scoreBoard) {
     if (!menuBg.load(menuResPath, sf::Vector2u(pixelSizeX, pixelSizeY), level, xPixels, yPixels))
         throw std::runtime_error("Failed to load the tilemap probably because file was not found.");
 
@@ -18,6 +18,16 @@ MenuState::MenuState(sf::Font& mainFont) {
     introText.setPosition(screenResWidth / 2 - buttonSizeX + pixelSizeX, screenResHeight / 2 - 3 * buttonSizeY);
     introText.setCharacterSize(210);
     introText.setFont(mainFont);
+
+    highScore.setString(scoreBoard->getHighScore());
+    highScore.setCharacterSize(pixelSizeX * 3);
+    highScore.setPosition(pixelSizeX * 2, screenResHeight / 2 + pixelSizeY * 3);
+    highScore.setFont(mainFont);
+
+    highScoreHeader.setString("Highscore");
+    highScoreHeader.setCharacterSize(pixelSizeX * 3);
+    highScoreHeader.setPosition(0, screenResHeight / 2);
+    highScoreHeader.setFont(mainFont);
     //buttonArr[0] = playButton;
     //buttonArr[1] = exitButton;
     //arrSize = 2;
@@ -26,6 +36,8 @@ MenuState::MenuState(sf::Font& mainFont) {
 }
 
 int MenuState::update(sf::Keyboard::Key& press, ScoreBoard* scoreBoard) {
+    highScore.setString(scoreBoard->getHighScore());
+
     if (press == sf::Keyboard::Down) {
         if (playButton.isActive()) {
             playButton.deactivate();
@@ -57,6 +69,8 @@ int MenuState::update(sf::Keyboard::Key& press, ScoreBoard* scoreBoard) {
 void MenuState::drawState(sf::RenderWindow& window) {
     window.clear();
     window.draw(menuBg);
+    window.draw(highScoreHeader);
+    window.draw(highScore);
     playButton.drawButton(window);
     exitButton.drawButton(window);
     window.draw(introText);

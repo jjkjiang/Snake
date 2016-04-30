@@ -30,12 +30,12 @@ GameOverState::GameOverState(sf::Font& mainFont, ScoreBoard* scoreBoard) {
     enteredThird = false;
 
     //yourScore.setString(scoreBoard->getLastScore());
-    restartButtonLocation.y -= pixelSizeY * 3;
+    restartButtonLocation.y -= pixelSizeY * 4;
     yourScore.setFont(mainFont);
     yourScore.setCharacterSize(pixelSizeX * 2);
     yourScore.setPosition(restartButtonLocation);
 
-    returnButtonLocation.y -= pixelSizeY * 3;
+    returnButtonLocation.y -= pixelSizeY * 4;
     highScore.setString(scoreBoard->getHighScore());
     highScore.setFont(mainFont);
     highScore.setCharacterSize(pixelSizeX * 2);
@@ -143,6 +143,7 @@ int GameOverState::updateNameEntry(sf::Keyboard::Key& press, ScoreBoard* scoreBo
             convert << score;
             resultString += convert.str();
             yourScore.setString(resultString);
+            if (score > scoreBoard->getHighScoreInt()) highScore.setString(resultString);
         }
     }
     press = sf::Keyboard::Unknown;

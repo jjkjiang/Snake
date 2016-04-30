@@ -12,7 +12,7 @@ GameEngine::GameEngine(sf::Font* mainFont) {
 }
 
 void GameEngine::init() {
-    game.push(new MenuState(*mainFont));
+    game.push(new MenuState(*mainFont, scoreBoard));
 }
 
 void GameEngine::update(sf::Keyboard::Key& press) {

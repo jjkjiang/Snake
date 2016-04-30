@@ -14,8 +14,10 @@ private:
     Button playButton;
     Button exitButton;
     sf::Text introText;
+    sf::Text highScoreHeader;
+    sf::Text highScore;
 public:
-    MenuState(sf::Font&);
+    MenuState(sf::Font&, ScoreBoard*);
     virtual int update(sf::Keyboard::Key&, ScoreBoard*);
     virtual void drawState(sf::RenderWindow&);
 };
