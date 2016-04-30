@@ -68,8 +68,12 @@ void ScoreBoard::write(string name, int score)
 
 string ScoreBoard::getHighScore()
 {
-  stringstream score;
-  score << scores.at(0).name << " " << scores.at(0).score;
+  if(!scores.empty())_
+  {
 
-  return score.str();
+    stringstream score;
+    score << scores.at(0).name << " " << scores.at(0).score;
+    return score.str();
+  }
+  return "";
 }
