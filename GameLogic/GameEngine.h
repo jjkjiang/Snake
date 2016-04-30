@@ -10,13 +10,16 @@
 #include "../GameStates/State.h"
 #include "../GameStates/MenuState.h"
 #include "../GameStates/GameState.h"
+#include "ScoreBoard.h"
 
 class GameEngine {
 private:
     sf::Font* mainFont;
     std::stack<State*> game;
+    ScoreBoard* scoreBoard;
 public:
-    void init(sf::Font*);
+    GameEngine(sf::Font*);
+    void init();
     void update(sf::Keyboard::Key&);
     void drawState(sf::RenderWindow&);
 };

@@ -15,8 +15,8 @@ int main() {
 
     // press is a variable that holds the current "button" pressed used for updates
     sf::Keyboard::Key press;
-    GameEngine gameEngine;
-    gameEngine.init(mainFont);
+    GameEngine gameEngine(mainFont);
+    gameEngine.init();
 
     while (window.isOpen()) {
         sf::Event event;

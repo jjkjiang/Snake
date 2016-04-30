@@ -4,6 +4,7 @@
 #include <fstream>
 #include <vector>
 using namespace std;
+
 const int MAXSCORES = 5;
 struct Score
 {

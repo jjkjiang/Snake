@@ -5,8 +5,13 @@
 #include "GameEngine.h"
 #include "../GameStates/GameOverState.h"
 
-void GameEngine::init(sf::Font* mainFont) {
+GameEngine::GameEngine(sf::Font* mainFont) {
+    std::string fileName = "highScores.db";
+    scoreBoard = new ScoreBoard(fileName.c_str());
     this->mainFont = mainFont;
+}
+
+void GameEngine::init() {
     game.push(new MenuState(*mainFont));
 }
 
