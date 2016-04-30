@@ -1,5 +1,5 @@
 //
-// Created by Jerry on 4/21/2016.
+// Created by jerry on 2016/04/26.
 //
 
 #ifndef SNAKE_PAUSESTATE_H

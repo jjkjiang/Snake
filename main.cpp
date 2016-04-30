@@ -2,46 +2,36 @@
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
 #include <stdexcept>
-#include "GameObjects/Snake.h"
-#include "GameObjects/Fruit.h"
-#include "GameLogic/GameState.h"
-#include "Definitions/Logic.h"
+#include "Definitions/TileMapArr.h"
 #include "Definitions/ResolutionVariables.h"
+#include "GameLogic/GameEngine.h"
 
 int main() {
-    // create the window
     sf::RenderWindow window(sf::VideoMode(screenResWidth, screenResHeight), "Snake");
+    sf::Font* mainFont = new sf::Font;
+    if (!mainFont->loadFromFile("VTSR.ttf")) {
+        throw std::runtime_error("Can't load mainfont");
+    }
 
-    // define the level with an array of tile indices
-    sf::RectangleShape shape = sf::RectangleShape(sf::Vector2f(pixelSizeX, pixelSizeY));
-    shape.setFillColor(sf::Color::Green);
-    shape.setPosition(100,100);
+    // press is a variable that holds the current "button" pressed used for updates
+    sf::Keyboard::Key press;
+    GameEngine gameEngine;
+    gameEngine.init(mainFont);
 
-    // create the tilemap from the level definition
-
-    sf::Keyboard::Key press = sf::Keyboard::Up;
-    // run the main loop
-    GameState gameState;
-    while (window.isOpen())
-    {
-
-        // handle events
+    while (window.isOpen()) {
         sf::Event event;
-
-        while (window.pollEvent(event))
-        {
+        // event loop
+        while (window.pollEvent(event)) {
             if(event.type == sf::Event::Closed)
                 window.close();
             if(event.type == sf::Event::KeyPressed) {
                 press = event.key.code;
             }
         }
-        //window.display();
-        gameState.drawState(window);
-        window.draw(shape);
-        gameState.update(press);
-        // draw the map
+        gameEngine.update(press);
+        gameEngine.drawState(window);
     }
+
 
     return 0;
 }
