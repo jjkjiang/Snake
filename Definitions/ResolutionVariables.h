@@ -13,6 +13,7 @@ const unsigned xPixels = screenResWidth / pixelSizeX;
 const unsigned yPixels = screenResHeight / pixelSizeY;
 const std::string gameResPath = "res/tileset4.png";
 const std::string menuResPath = "res/tileset5.png"; // decide later
+const std::string gameOverResPath = "res/tileset5.png";
 
 const int buttonSizeX = 10 * pixelSizeX;
 const int buttonSizeY = 4 * pixelSizeY;

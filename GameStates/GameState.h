@@ -1,7 +1,6 @@
 #ifndef __GAMESTATE_H__
 #define __GAMESTATE_H__
 
-#include "StateManager.h"
 #include "State.h"
 #include "../GameObjects/Fruit.h"
 #include "../GameObjects/Snake.h"

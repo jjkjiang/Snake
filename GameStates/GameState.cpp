@@ -25,7 +25,7 @@ int GameState::update(sf::Keyboard::Key& press) {
             player1Fruit.resetFruit();
         } else if (result == 2) {
             // player crashed into something - game ends
-            return 2;
+            return 3;
         }
         gameClock.restart();
     }

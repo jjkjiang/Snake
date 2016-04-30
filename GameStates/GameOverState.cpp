@@ -3,3 +3,29 @@
 //
 
 #include "GameOverState.h"
+#include "../Definitions/ResolutionVariables.h"
+#include "../Definitions/TileMapArr.h"
+
+GameOverState::GameOverState(sf::Font& mainFont) {
+    if (!gameOverBg.load(menuResPath, sf::Vector2u(pixelSizeX, pixelSizeY), level, xPixels, yPixels))
+        throw std::runtime_error("Failed to load the tilemap probably because file was not found.");
+
+    sf::Vector2f playButtonLocation(screenResWidth / 2 - buttonSizeX / 2, screenResHeight / 2 - buttonSizeY / 2);
+    sf::Vector2f exitButtonLocation(playButtonLocation);
+    exitButtonLocation.y += buttonSizeY * 2;
+    restartButton = Button("PLAY", playButtonLocation, mainFont);
+    returnButton = Button("MENU", exitButtonLocation, mainFont);
+
+    gameOver.setString("GAME OVER");
+    gameOver.setFont(mainFont);
+    gameOver.setCharacterSize(700);
+    gameOver.setPosition(pixelSizeX, pixelSizeY);
+}
+
+int GameOverState::update(sf::Keyboard::Key& press) {
+    return 0;
+}
+
+void GameOverState::drawState(sf::RenderWindow&) {
+
+}

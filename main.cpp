@@ -8,8 +8,8 @@
 
 int main() {
     sf::RenderWindow window(sf::VideoMode(screenResWidth, screenResHeight), "Snake");
-    sf::Font mainFont;
-    if (!mainFont.loadFromFile("VTSR.ttf")) {
+    sf::Font* mainFont = new sf::Font;
+    if (!mainFont->loadFromFile("VTSR.ttf")) {
         throw std::runtime_error("Can't load mainfont");
     }
     // initialize states and a variable to hold the last keyboard press by the user.

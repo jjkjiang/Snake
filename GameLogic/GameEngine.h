@@ -13,9 +13,10 @@
 
 class GameEngine {
 private:
+    sf::Font* mainFont;
     std::stack<State*> game;
 public:
-    void init(sf::Font&);
+    void init(sf::Font*);
     void update(sf::Keyboard::Key&);
     void drawState(sf::RenderWindow&);
 };

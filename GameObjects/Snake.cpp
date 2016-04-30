@@ -112,6 +112,7 @@ bool Snake::collision() {
         currPos.y <= borderTop) {
         return true;
     }
+
     for (SnakeBody* i = head->next; i != 0; i = i->next) {
         if (currPos == i->shape.getPosition()) {
             return true;
