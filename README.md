@@ -1,4 +1,4 @@
-# SnakePong
+# Snake
 
 Please don't push directly to master!!
 
